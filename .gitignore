@@ -31,5 +31,5 @@ yarn-error.log*
 # vercel
 .vercel
 
-#folders ignoring not working, keeps commiting to devbranch
- DesignDocs/
+#folders 
+DesignDocs/
