@@ -3,10 +3,11 @@ import Link from "next/link";
 function HomePage() {
   return (
     <div>
-      <h1>Home page</h1>
-      <p>Hello</p>
+      <h1 color="red" text-align="center">
+        Under Construction...
+      </h1>
 
-      <Link href="./news">See the news!</Link>
+      {/* <Link href="./news">See the news!</Link> */}
     </div>
   );
 }
