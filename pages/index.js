@@ -1,13 +1,17 @@
-import Link from "next/link";
+import { Fragment } from "react";
+import Head from "next/head";
+import LandingPage from "../components/landingpage/LandingPage";
+//
 
 function HomePage() {
   return (
-    <div>
-      <h1>Home page</h1>
-      <p>Hello</p>
-
-      <Link href="./news">See the news!</Link>
-    </div>
+    <Fragment>
+      <Head>
+        <title>Restaurant Name</title>
+        <meta name="description" content="website for restaurant" />
+      </Head>
+      <LandingPage />
+    </Fragment>
   );
 }
 
