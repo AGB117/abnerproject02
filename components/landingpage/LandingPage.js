@@ -10,7 +10,11 @@ function LandingPage() {
           src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80"
         ></img>
 
-        <h1>The best burgers in the city!</h1>
+        <h1>
+          The best burgers in the city! need to put this ection as a 2 column
+          container, right side a picture and left side the best burgers with
+          some paragraph.
+        </h1>
 
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
