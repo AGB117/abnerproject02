@@ -6,7 +6,7 @@ function MainNav() {
   return (
     <div>
       <header className={classes.header}>
-        <div className={classes.name}>Name of Restaurant</div>
+        <p className={classes.name}>Name of Restaurant</p>
         <div>
           <ul>
             <li>
@@ -21,9 +21,11 @@ function MainNav() {
               <Link href="">Locations</Link>
             </li>
             <li>
-              <Link href="">
-                <ShoppingCartIcon style={{ color: "red" }} />
-              </Link>
+              <div className={classes.cartContainer}>
+                <Link href="">
+                  <ShoppingCartIcon className={classes.cartLogo} />
+                </Link>
+              </div>
             </li>
           </ul>
         </div>

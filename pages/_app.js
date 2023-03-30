@@ -5,9 +5,9 @@ import "../styles/globals.css";
 
 function App({ Component, pageProps }) {
   return (
-    // <Layout>
-    <Component {...pageProps} />
-    // </Layout>
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
   );
 }
 

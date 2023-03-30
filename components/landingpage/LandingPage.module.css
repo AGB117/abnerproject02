@@ -1,7 +1,23 @@
 .landing {
-  font-size: 3rem;
+  width: 100%;
+  overflow: hidden;
+  font-size: 2rem;
 }
 
 .landing p {
-  color: black;
+  color: #343a40;
+  margin: 20px;
+}
+
+.landing img {
+  width: 100vw;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.landing h1 {
+  text-align: center;
+  color: #343a40;
+  margin-top: 10px;
 }

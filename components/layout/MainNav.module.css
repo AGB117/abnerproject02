@@ -1,35 +1,48 @@
 .header {
   width: 100%;
-  height: 5rem;
+  height: 50px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 5% 5%;
-  background-color: rgb(201, 42, 42);
-  font-size: 1.5rem;
+  background-color: #ecfcfd;
+  font-size: 2rem;
+  font-weight: 400;
 }
 
 .name {
-  color: rgb(197, 246, 250);
+  padding: 15px;
+  color: #343a40;
   font-size: 2rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .header ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   align-items: right;
-  font-family: Verdana;
 }
 
 .header li {
+  padding: 15px;
   margin-left: 2rem;
-  font-weight: 600;
 }
 
 .header a {
   text-decoration: none;
-  color: rgb(197, 246, 250);
+  color: #343a40;
+}
+
+.cartContainer {
+  padding: 15px 30px;
+  background-color: rgb(201, 42, 42);
+  z-index: 1;
+  position: relative;
+  border-radius: 50px;
+}
+
+.cartLogo {
+  stroke: #ecfcfd;
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  z-index: -7;
+  transform: translate(-15px, -15px);
 }
