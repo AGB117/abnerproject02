@@ -4,7 +4,7 @@ import { ShoppingCartIcon } from "@heroicons/react/24/outline";
 
 function MainNav() {
   return (
-    <div>
+    <div className={classes.position}>
       <header className={classes.header}>
         <p className={classes.name}>Name of Restaurant</p>
         <div>
