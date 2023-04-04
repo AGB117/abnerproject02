@@ -1,4 +1,5 @@
 .landing {
+  background-color: #ecfcfd;
   width: 100%;
   overflow: hidden;
   font-size: 2rem;
@@ -10,14 +11,21 @@
 }
 
 .landing img {
-  width: 100vw;
+  width: 50vw;
   height: auto;
-  margin: 0;
-  padding: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5%;
+  margin-top: 80px;
 }
 
 .landing h1 {
   text-align: center;
   color: #343a40;
   margin-top: 10px;
+}
+
+.menuSection {
+  background-color: red;
 }

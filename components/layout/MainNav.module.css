@@ -3,7 +3,7 @@
   height: 50px;
   display: flex;
   justify-content: space-between;
-  background-color: #ecfcfd;
+  background-color: #4dabf7;
   font-size: 2rem;
   font-weight: 400;
 }
@@ -15,7 +15,7 @@
 
 .name {
   padding: 15px;
-  color: #343a40;
+  color: #212529;
   font-size: 2rem;
 }
 
@@ -32,7 +32,7 @@
 
 .header a {
   text-decoration: none;
-  color: #343a40;
+  color: #212529;
 }
 
 .cartContainer {
