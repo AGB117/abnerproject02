@@ -1,0 +1,27 @@
+.card {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+/*///////
+  */
+
+/*   
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+
+  grid-template-columns: repeat(3, 1fr); */
+
+/* 
+.card {
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+} */

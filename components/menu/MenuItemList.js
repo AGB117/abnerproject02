@@ -13,6 +13,7 @@ function MenuItemList(props) {
             price={menuItem.price}
             name={menuItem.name}
             image={menuItem.image}
+            calories={menuItem.calories}
           />
         ))}
       </ul>

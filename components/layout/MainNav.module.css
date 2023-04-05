@@ -6,6 +6,8 @@
   background-color: #e7f5ff;
   font-size: 2rem;
   font-weight: 400;
+  /* border-bottom: 1px solid;
+  border-color: #333; */
 }
 .position header {
   position: fixed;
