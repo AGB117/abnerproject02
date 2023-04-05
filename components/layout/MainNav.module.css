@@ -3,7 +3,7 @@
   height: 50px;
   display: flex;
   justify-content: space-between;
-  background-color: #4dabf7;
+  background-color: #e7f5ff;
   font-size: 2rem;
   font-weight: 400;
 }
@@ -37,14 +37,14 @@
 
 .cartContainer {
   padding: 15px 30px;
-  background-color: rgb(201, 42, 42);
+  background-color: #4dabf7;
   z-index: 1;
   position: relative;
   border-radius: 50px;
 }
 
 .cartLogo {
-  stroke: #ecfcfd;
+  stroke: #e7f5ff;
   position: absolute;
   height: 30px;
   width: 30px;

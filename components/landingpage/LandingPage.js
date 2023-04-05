@@ -24,8 +24,8 @@ function LandingPage() {
 
         <div id="menu" className={classes.menuSection}>
           <h1>Our Menu</h1>
+          <div>Cards with burgers</div>
         </div>
-        <div>Cards with burgers</div>
       </div>
     </Fragment>
   );
