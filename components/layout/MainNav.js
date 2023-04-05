@@ -6,7 +6,9 @@ function MainNav() {
   return (
     <div className={classes.position}>
       <header className={classes.header}>
-        <p className={classes.name}>Name of Restaurant</p>
+        <p className={classes.name}>
+          <Link href="/">Name of Restaurant</Link>
+        </p>
         <div>
           <ul>
             <li>
@@ -20,6 +22,13 @@ function MainNav() {
             <li>
               <Link href="">Locations</Link>
             </li>
+
+            <li>
+              <Link href="">
+                <button className={classes.orderButton}>Order Now</button>
+              </Link>
+            </li>
+
             <li>
               <div className={classes.cartContainer}>
                 <Link href="">
