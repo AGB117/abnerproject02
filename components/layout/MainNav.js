@@ -30,11 +30,11 @@ function MainNav() {
             </li>
 
             <li>
-              <div className={classes.cartContainer}>
-                <Link href="">
+              <Link href="">
+                <button className={classes.cartContainer}>
                   <ShoppingCartIcon className={classes.cartLogo} />
-                </Link>
-              </div>
+                </button>
+              </Link>
             </li>
           </ul>
         </div>

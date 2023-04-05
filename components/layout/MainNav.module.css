@@ -38,12 +38,19 @@
   color: #212529;
 }
 
+.cartContainer:hover,
+.orderButton:active {
+  background-color: #339af0;
+  cursor: pointer;
+}
+
 .cartContainer {
-  padding: 15px 30px;
+  padding: 25px 25px;
   background-color: #4dabf7;
   z-index: 1;
-  position: relative;
+  border: none;
   border-radius: 50px;
+  transform: translate(-15px, -15px);
 }
 
 .cartLogo {
@@ -51,7 +58,7 @@
   position: absolute;
   height: 30px;
   width: 30px;
-  z-index: -7;
+  z-index: 2;
   transform: translate(-15px, -15px);
 }
 
