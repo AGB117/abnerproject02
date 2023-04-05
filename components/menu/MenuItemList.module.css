@@ -1,6 +1,32 @@
 .menuItems {
   margin-top: 100px;
   text-align: center;
+  margin-top: 100px;
   /* margin-left: auto; */
   /* margin-right: auto; */
+}
+
+.menuItems h1 {
+  font-size: 5rem;
+  color: black;
+}
+.menuItems ul {
+  margin-top: 50px;
+  list-style: none;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.grid {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+}
+
+.grid3Cols {
+  grid-template-columns: repeat(3, 1fr);
 }
