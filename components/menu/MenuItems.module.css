@@ -1,8 +1,89 @@
-.image {
-  height: 100px;
-  width: 100px;
+/*
+///////////////
+inline card items
+//////////////////
+*/
+.itemLine {
+  display: flex;
+  height: 40px;
+  align-content: center;
 }
+
+/*
+///////
+card
+/////////
+*/
+
+.image {
+  height: 200px;
+  width: 200px;
+}
+.name {
+  font-size: 2rem;
+  text-align: center;
+  margin-left: 10px;
+  font-weight: bold;
+  color: #212529;
+}
+
+.description {
+  height: 60px;
+  font-size: 1.5rem;
+  text-align: left;
+  margin-left: 10px;
+  color: #212529;
+}
+
+.price {
+  color: #212529;
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-left: 5px;
+  align-items: center;
+  display: flex;
+}
+
+.calories {
+  color: #212529;
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-left: 5px;
+  align-items: center;
+  display: flex;
+}
+
 /*
 //////////////////////////
+      ICONS
 //////////////////////////
 */
+.descriptionIcon {
+  stroke: black;
+  height: 30px;
+  width: 30px;
+  margin-top: 2px;
+  margin-left: 10px;
+  align-items: center;
+  display: flex;
+}
+
+.dollarIcon {
+  stroke: black;
+  height: 30px;
+  width: 30px;
+  margin-top: 2px;
+  margin-left: 10px;
+  align-items: center;
+  display: flex;
+}
+
+.caloriesIcon {
+  stroke: black;
+  height: 30px;
+  width: 30px;
+  margin-top: 2px;
+  margin-left: 10px;
+  align-items: center;
+  display: flex;
+}
