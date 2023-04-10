@@ -33,6 +33,12 @@
   margin: 40px;
 }
 
+.imageSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .hero img {
   border-radius: 5%;
   width: 500px;

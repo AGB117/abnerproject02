@@ -23,14 +23,17 @@ function MenuItemList(props) {
           </div>
 
           <div className={classes.itemLine}>
-            <CurrencyDollarIcon className={classes.dollarIcon} />
-
-            <p className={classes.price}>{props.price}</p>
+            <FireIcon className={classes.caloriesIcon} />
+            <span className={classes.calories}>
+              <span className={classes.caloriesNumber}>{props.calories}</span>
+              Calories
+            </span>
           </div>
 
           <div className={classes.itemLine}>
-            <FireIcon className={classes.caloriesIcon} />
-            <p className={classes.calories}>{props.calories}</p>
+            <CurrencyDollarIcon className={classes.dollarIcon} />
+
+            <p className={classes.price}>{props.price}</p>
           </div>
         </div>
       </Card>

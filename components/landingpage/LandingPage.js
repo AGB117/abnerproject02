@@ -13,7 +13,7 @@ function LandingPage() {
 
           <p>Our burgers are made with 100% angus beef, never frozen!!</p>
         </div>
-        <div>
+        <div className={classes.imageSection}>
           <img
             className={classes.heroImg}
             src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80"
