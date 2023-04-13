@@ -6,21 +6,27 @@ function MenuItemList(props) {
   //react state fro separating menu items by category
   const [category, setCategory] = useState("burgers");
 
-  function filterBurgersHandler() {
-    setCategory((cat) => (cat = "burger"));
-    console.log(category);
+  function filterBurgersHandler(event) {
+    setCategory((cat) => (cat = "burgers"));
+    props.onChangeCategory(category);
+    // console.log(category);
   }
 
-  function filterFriesHandler() {
+  function filterFriesHandler(event) {
     setCategory((cat) => (cat = "fries"));
-    console.log(category);
+    props.onChangeCategory(category);
+    // console.log(category);
   }
   return (
     <Fragment>
       <div className={`${classes.menuItems}`}>
         <h1>Enjoy our menu!</h1>
-        <button onClick={filterBurgersHandler}>Burgers</button>
-        <button onClick={filterFriesHandler}>Fries</button>
+        <button value={category} onClick={filterBurgersHandler}>
+          Burgers
+        </button>
+        <button value={category} onClick={filterFriesHandler}>
+          Fries
+        </button>
         <p style={{ fontSize: "20px" }}>{category}</p>
         <ul
           className={`${classes.container} ${classes.grid} ${classes.grid3Cols}`}
