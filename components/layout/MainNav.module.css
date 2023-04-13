@@ -86,3 +86,17 @@
   background-color: #339af0;
   cursor: pointer;
 }
+
+/*//////////////
+////IMAGE//////
+/////////////*/
+
+.logo img {
+  width: 100px;
+  height: 100px;
+  margin-top: 5px;
+
+  /* display: flex;
+  position: relative;
+  margin: auto; */
+}

@@ -6,9 +6,11 @@ function MainNav() {
   return (
     <div className={classes.position}>
       <header className={classes.header}>
-        <p className={classes.name}>
-          <Link href="/">Name of Restaurant</Link>
-        </p>
+        <div className={classes.logo}>
+          <Link href="/">
+            <img alt="logo" src="/ColorLogoNoBackground.png"></img>
+          </Link>
+        </div>
         <div>
           <ul>
             <li>
