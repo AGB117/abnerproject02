@@ -6,13 +6,13 @@ function MenuItemList(props) {
   //react state fro separating menu items by category
   const [category, setCategory] = useState("burgers");
 
-  function filterBurgersHandler(event) {
+  function filterBurgersHandler() {
     setCategory((cat) => (cat = "burgers"));
     props.onChangeCategory(category);
     // console.log(category);
   }
 
-  function filterFriesHandler(event) {
+  function filterFriesHandler() {
     setCategory((cat) => (cat = "fries"));
     props.onChangeCategory(category);
     // console.log(category);
