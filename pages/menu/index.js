@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import MenuItemList from "../../components/menu/MenuItemList";
 
 const DUMMY_MENU = [
@@ -56,6 +56,7 @@ function Menu(props) {
   const [category, setCategory] = useState("fries");
 
   const onChangeCategoryHandler = (cat) => {
+    // useEffect()
     setCategory(cat);
   };
 

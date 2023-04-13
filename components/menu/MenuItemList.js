@@ -1,18 +1,20 @@
 import MenuItems from "./MenuItems";
 import classes from "./MenuItemList.module.css";
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 
 function MenuItemList(props) {
   //react state fro separating menu items by category
   const [category, setCategory] = useState("burgers");
 
   function filterBurgersHandler() {
+    // useEffect()
     setCategory((cat) => (cat = "burgers"));
     props.onChangeCategory(category);
     // console.log(category);
   }
 
   function filterFriesHandler() {
+    // useEffect()
     setCategory((cat) => (cat = "fries"));
     props.onChangeCategory(category);
     // console.log(category);
