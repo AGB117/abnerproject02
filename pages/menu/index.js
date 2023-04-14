@@ -1,5 +1,6 @@
 import { Fragment, useEffect, useState } from "react";
 import MenuItemList from "../../components/menu/MenuItemList";
+import Head from "next/head";
 
 const DUMMY_MENU = [
   {
@@ -53,7 +54,7 @@ const DUMMY_MENU = [
 // );
 
 function Menu(props) {
-  const [category, setCategory] = useState("fries");
+  const [category, setCategory] = useState("burgers");
 
   const onChangeCategoryHandler = (cat) => {
     // useEffect()
@@ -61,13 +62,18 @@ function Menu(props) {
   };
 
   const filter = DUMMY_MENU.filter((items) => items.category === category);
-  console.log(filter);
+  // console.log(filter);
 
   return (
-    <MenuItemList
-      onChangeCategory={onChangeCategoryHandler}
-      menuItems={filter}
-    />
+    <Fragment>
+      <Head>
+        <title>Burger Place | Menu</title>
+      </Head>
+      <MenuItemList
+        onChangeCategory={onChangeCategoryHandler}
+        menuItems={filter}
+      />
+    </Fragment>
   );
 }
 

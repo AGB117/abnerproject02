@@ -9,27 +9,44 @@ function MenuItemList(props) {
   function filterBurgersHandler() {
     // useEffect()
     setCategory((cat) => (cat = "burgers"));
-    props.onChangeCategory(category);
+    // props.onChangeCategory(category);
     // console.log(category);
   }
 
   function filterFriesHandler() {
     // useEffect()
     setCategory((cat) => (cat = "fries"));
-    props.onChangeCategory(category);
+    // props.onChangeCategory(category);
     // console.log(category);
   }
+
+  useEffect(() => {
+    props.onChangeCategory(category);
+  }, [category]);
+
   return (
     <Fragment>
       <div className={`${classes.menuItems}`}>
         <h1>Enjoy our menu!</h1>
-        <button value={category} onClick={filterBurgersHandler}>
-          Burgers
-        </button>
-        <button value={category} onClick={filterFriesHandler}>
-          Fries
-        </button>
-        <p style={{ fontSize: "20px" }}>{category}</p>
+        <div className={classes.btnContainer}>
+          <button
+            className={`${classes.btnCategoryActive}`}
+            onClick={filterBurgersHandler}
+            value="burger"
+            key="b"
+          >
+            Burgers
+          </button>
+          <button
+            className={classes.btnCategoryInactive}
+            onClick={filterFriesHandler}
+            value="fries"
+            key="f"
+          >
+            Fries
+          </button>
+        </div>
+        {/* <p style={{ fontSize: "20px" }}>{category}</p> */}
         <ul
           className={`${classes.container} ${classes.grid} ${classes.grid3Cols}`}
         >

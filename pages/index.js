@@ -8,7 +8,7 @@ function HomePage() {
   return (
     <Fragment>
       <Head>
-        <title>Restaurant Name</title>
+        <title>Burger Place</title>
         <meta name="description" content="website for restaurant" />
       </Head>
 

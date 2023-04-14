@@ -6,7 +6,7 @@
 
 .menuItems h1 {
   font-size: 5rem;
-  color: black;
+  color: #212529;
 }
 .menuItems ul {
   margin-top: 50px;
@@ -27,4 +27,42 @@
 
 .grid3Cols {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.btnCategoryActive {
+  color: #e7f5ff;
+  background-color: #4dabf7;
+  border: none;
+  border-radius: 10px;
+  font-size: 2rem;
+  padding: 10px 15px;
+  transform: translate(0, -10px);
+  margin-left: 30px;
+}
+.btnCategoryActive:hover,
+.btnCategoryActive:active {
+  cursor: pointer;
+  background-color: #339af0;
+}
+
+.btnContainer {
+  margin-top: 20px;
+}
+
+.btnCategoryInactive {
+  color: #212529;
+  background-color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+  transform: translate(0, -10px);
+  margin-left: 30px;
+}
+
+.btnCategoryInactive:hover,
+.btnCategoryInactive:active {
+  color: #e7f5ff;
+  background-color: #4dabf7;
+  border-radius: 10px;
+  cursor: pointer;
 }
