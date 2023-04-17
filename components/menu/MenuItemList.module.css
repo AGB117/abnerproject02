@@ -7,9 +7,10 @@
 .menuItems h1 {
   font-size: 5rem;
   color: #212529;
+  margin-bottom: 40px;
 }
 .menuItems ul {
-  margin-top: 50px;
+  margin-top: 25px;
   list-style: none;
 }
 

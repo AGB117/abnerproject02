@@ -5,32 +5,46 @@ import { Fragment, useEffect, useState } from "react";
 function MenuItemList(props) {
   //react state fro separating menu items by category
   const [category, setCategory] = useState("burgers");
+  const [isBurgerActive, setIsBurgerActive] = useState(true);
+  const [isFriesActive, setIsFriesActive] = useState(false);
+  const [isDrinksActive, setIsDrinksActive] = useState(false);
 
   function filterBurgersHandler() {
-    // useEffect()
     setCategory((cat) => (cat = "burgers"));
-    // props.onChangeCategory(category);
-    // console.log(category);
+    setIsBurgerActive((status) => (status = true));
+    setIsFriesActive((status) => (status = false));
+    setIsDrinksActive((cat) => (cat = false));
   }
 
   function filterFriesHandler() {
-    // useEffect()
     setCategory((cat) => (cat = "fries"));
-    // props.onChangeCategory(category);
-    // console.log(category);
+    setIsFriesActive((status) => (status = true));
+    setIsBurgerActive((status) => (status = false));
+    setIsDrinksActive((cat) => (cat = false));
+  }
+
+  function filterDrinksHandler() {
+    setCategory((cat) => (cat = "drinks"));
+    setIsDrinksActive((cat) => (cat = true));
+    setIsBurgerActive((status) => (status = false));
+    setIsFriesActive((status) => (status = false));
   }
 
   useEffect(() => {
     props.onChangeCategory(category);
-  }, [category]);
+  }, [category, isBurgerActive, isFriesActive, isDrinksActive]);
 
   return (
     <Fragment>
-      <div className={`${classes.menuItems}`}>
+      <div className={classes.menuItems}>
         <h1>Enjoy our menu!</h1>
         <div className={classes.btnContainer}>
           <button
-            className={`${classes.btnCategoryActive}`}
+            className={
+              isBurgerActive
+                ? classes.btnCategoryActive
+                : classes.btnCategoryInactive
+            }
             onClick={filterBurgersHandler}
             value="burger"
             key="b"
@@ -38,12 +52,28 @@ function MenuItemList(props) {
             Burgers
           </button>
           <button
-            className={classes.btnCategoryInactive}
+            className={
+              isFriesActive
+                ? classes.btnCategoryActive
+                : classes.btnCategoryInactive
+            }
             onClick={filterFriesHandler}
             value="fries"
             key="f"
           >
             Fries
+          </button>
+          <button
+            className={
+              isDrinksActive
+                ? classes.btnCategoryActive
+                : classes.btnCategoryInactive
+            }
+            onClick={filterDrinksHandler}
+            value="drinks"
+            key="d"
+          >
+            Drinks
           </button>
         </div>
         {/* <p style={{ fontSize: "20px" }}>{category}</p> */}
