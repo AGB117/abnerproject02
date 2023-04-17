@@ -1,4 +1,5 @@
 import MainNav from "./MainNav";
+import Footer from "./Footer";
 
 function Layout(props) {
   return (
@@ -7,6 +8,7 @@ function Layout(props) {
         <MainNav />
         <main>{props.children}</main>
         {/* somehow props.children is necesary so use the layout to wrap around components  */}
+        <Footer />
       </div>
     </div>
   );

@@ -1,0 +1,11 @@
+.position footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer {
+  height: 100px;
+  background-color: rgb(240, 240, 240);
+  font-size: 2rem;
+}
