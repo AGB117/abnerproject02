@@ -1,11 +1,35 @@
-.position footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+.footer {
+  background-color: rgb(240, 240, 240);
+  padding: 5rem 0;
+  margin-top: auto;
+  border-top: 1px solid;
+  border-color: #919191;
 }
 
-.footer {
-  height: 100px;
-  background-color: rgb(240, 240, 240);
-  font-size: 2rem;
+.grid {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+}
+
+.gridFooter {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.footerLogo {
+  width: 200px;
+  height: 60px;
+  position: relative;
+  margin-left: 20px;
+  transform: translateY(-35px);
+}
+
+.socialLogos {
+  margin: 0px 10px 20px 20px;
+}
+
+.copyright p {
+  margin-left: 20px;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
