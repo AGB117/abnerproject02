@@ -18,21 +18,21 @@ function MainNav() {
             </li>
 
             <li>
-              <Link href=""> About Us</Link>
+              <Link href="/"> About Us</Link>
             </li>
 
             <li>
-              <Link href="">Locations</Link>
+              <Link href="/">Locations</Link>
             </li>
 
             <li>
-              <Link href="">
+              <Link href="/">
                 <button className={classes.orderButton}>Order Now</button>
               </Link>
             </li>
 
             <li>
-              <Link href="">
+              <Link href="/">
                 <button className={classes.cartContainer}>
                   <ShoppingCartIcon className={classes.cartLogo} />
                 </button>

@@ -1,11 +1,3 @@
-.footer {
-  background-color: rgb(240, 240, 240);
-  padding: 5rem 0;
-  margin-top: auto;
-  border-top: 1px solid;
-  border-color: #919191;
-}
-
 .grid {
   display: grid;
   row-gap: 9.6rem;
@@ -14,6 +6,14 @@
 
 .gridFooter {
   grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.footer {
+  background-color: rgb(300, 300, 300);
+  padding: 5rem 0;
+  margin-top: auto;
+  border-top: 1px solid;
+  border-color: #919191;
 }
 
 .footerLogo {
@@ -28,8 +28,21 @@
   margin: 0px 10px 20px 20px;
 }
 
-.copyright p {
+.footer p {
+  line-height: 1.5;
   margin-left: 20px;
   font-size: 1.2rem;
   font-weight: 400;
+}
+
+.footer h1 {
+  font-size: 1.4rem;
+}
+
+.footer li {
+  font-weight: 400;
+  list-style: none;
+  line-height: 1.5;
+  margin-top: 25px;
+  font-size: 1.2rem;
 }

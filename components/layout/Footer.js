@@ -44,15 +44,39 @@ function Footer() {
               />
             </Link>
           </div>
-          <div className={classes.copyright}>
+          <div>
             <p>Copyright 2023 by Burger Place</p>
             <p>All rights reserved.</p>
           </div>
         </div>
-        <div>contact column</div>
-        <nav>accout links</nav>
-        <nav>company about for catering now hiring</nav>
-        <nav> help center privacy terms</nav>
+        <div>
+          <h1>Contact us</h1>
+          <ul>
+            <li> 555 Somewhere St Orlando, Florida 33888</li>
+            <li>407-863-5555</li>
+            <li>burger.place@burger.com</li>
+          </ul>
+        </div>
+        <nav>
+          <h1>Account</h1>
+          <ul>
+            <li>Log in</li>
+            <li>Order</li>
+          </ul>
+        </nav>
+        <nav>
+          <h1>About us</h1>
+          <ul>
+            <li>About Burger Place</li>
+            <li>Catering services</li>
+          </ul>
+        </nav>
+        <nav>
+          <h1>Help Center</h1>
+          <ul>
+            <li>Privacy and terms</li>
+          </ul>
+        </nav>
       </div>
     </footer>
   );
