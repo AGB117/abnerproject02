@@ -10,44 +10,38 @@ function MenuItemList(props) {
   return (
     <li>
       <Card>
-        <div>
-          <img className={classes.image} src={props.image}></img>
-        </div>
+        <img className={classes.image} src={props.image}></img>
         <p className={classes.name}>{props.name}</p>
-        <div>
-          <div className={classes.itemLine}>
-            <ChatCenteredText
-              className={classes.descriptionIcon}
-              size={30}
-              color=" #4dabf7"
-              weight="regular"
-            />
-            <p className={classes.description}>{props.description}</p>
-          </div>
+        <div className={classes.itemLine}>
+          <ChatCenteredText
+            className={classes.descriptionIcon}
+            size={30}
+            color=" #4dabf7"
+            weight="regular"
+          />
+          <p className={classes.description}>{props.description}</p>
+        </div>
 
-          <div className={classes.itemLine}>
-            <Flame
-              className={classes.caloriesIcon}
-              size={30}
-              color=" #4dabf7"
-              weight="regular"
-            />
-            <span className={classes.calories}>
-              <span className={classes.caloriesNumber}>{props.calories}</span>
-              Calories
-            </span>
-          </div>
+        <div className={classes.itemLine}>
+          <Flame
+            className={classes.caloriesIcon}
+            size={30}
+            color=" #4dabf7"
+            weight="regular"
+          />
+          <span className={classes.caloriesNumber}>{props.calories}</span>
+          <span className={classes.calories}>Calories</span>
+        </div>
 
-          <div className={classes.itemLine}>
-            <CurrencyCircleDollar
-              className={classes.dollarIcon}
-              size={30}
-              color=" #4dabf7"
-              weight="regular"
-            />
+        <div className={classes.itemLine}>
+          <CurrencyCircleDollar
+            className={classes.dollarIcon}
+            size={30}
+            color=" #4dabf7"
+            weight="regular"
+          />
 
-            <p className={classes.price}>{props.price}</p>
-          </div>
+          <p className={classes.price}>{props.price}</p>
         </div>
       </Card>
     </li>

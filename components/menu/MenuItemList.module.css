@@ -5,7 +5,8 @@
 .menuItems h1 {
   font-size: 5rem;
   color: #212529;
-  margin: 40px 0;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 .menuItems ul {
   margin-top: 25px;

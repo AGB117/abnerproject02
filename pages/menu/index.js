@@ -21,7 +21,7 @@ const DUMMY_MENU = [
     calories: 599,
     category: "burgers",
     image:
-      "https://images.unsplash.com/photo-1661670180492-bb08782f5e66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "https://images.unsplash.com/photo-1571091655789-405eb7a3a3a8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80",
   },
 
   {

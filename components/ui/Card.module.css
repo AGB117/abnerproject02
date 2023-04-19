@@ -1,6 +1,5 @@
 .card {
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.085);
-  /* background-color: aqua; */
   border-radius: 11px;
   overflow: hidden;
   transition: all 0.3s;
