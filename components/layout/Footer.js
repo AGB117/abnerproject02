@@ -9,7 +9,7 @@ import {
 function Footer() {
   return (
     <footer className={classes.footer}>
-      <div className={`${classes.grid} ${classes.gridFooter}`}>
+      <div className={`${classes.grid} ${classes.gridTemplateFooter}`}>
         <div>
           <Link href="/">
             <img

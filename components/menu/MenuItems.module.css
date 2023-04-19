@@ -22,15 +22,14 @@ card
 .name {
   font-size: 2rem;
   text-align: center;
-  margin-left: 10px;
+  margin: 10px;
   font-weight: bold;
-  color: #212529;
+  color: #333;
 }
 
 .description {
-  color: #212529;
-  font-size: 1.4rem;
-  font-weight: 600;
+  color: #333;
+  font-size: 1.6rem;
   margin-left: 5px;
   align-items: center;
   display: flex;
@@ -38,7 +37,7 @@ card
 
 .price {
   margin-left: 5px;
-  color: #212529;
+  color: #333;
   font-size: 2rem;
   font-weight: 600;
   align-items: center;
@@ -46,8 +45,8 @@ card
 }
 
 .calories {
-  font-size: 1.8rem;
-  color: #212529;
+  font-size: 1.6rem;
+  color: #333;
   margin-left: 5px;
   align-items: center;
   display: flex;

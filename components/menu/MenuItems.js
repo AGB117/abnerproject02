@@ -1,8 +1,8 @@
 import {
-  FireIcon,
-  CurrencyDollarIcon,
-  ChatBubbleBottomCenterTextIcon,
-} from "@heroicons/react/24/outline";
+  CurrencyCircleDollar,
+  Flame,
+  ChatCenteredText,
+} from "@phosphor-icons/react";
 import classes from "./MenuItems.module.css";
 import Card from "../ui/Card";
 
@@ -16,14 +16,22 @@ function MenuItemList(props) {
         <p className={classes.name}>{props.name}</p>
         <div>
           <div className={classes.itemLine}>
-            <ChatBubbleBottomCenterTextIcon
+            <ChatCenteredText
               className={classes.descriptionIcon}
+              size={30}
+              color=" #4dabf7"
+              weight="regular"
             />
             <p className={classes.description}>{props.description}</p>
           </div>
 
           <div className={classes.itemLine}>
-            <FireIcon className={classes.caloriesIcon} />
+            <Flame
+              className={classes.caloriesIcon}
+              size={30}
+              color=" #4dabf7"
+              weight="regular"
+            />
             <span className={classes.calories}>
               <span className={classes.caloriesNumber}>{props.calories}</span>
               Calories
@@ -31,7 +39,12 @@ function MenuItemList(props) {
           </div>
 
           <div className={classes.itemLine}>
-            <CurrencyDollarIcon className={classes.dollarIcon} />
+            <CurrencyCircleDollar
+              className={classes.dollarIcon}
+              size={30}
+              color=" #4dabf7"
+              weight="regular"
+            />
 
             <p className={classes.price}>{props.price}</p>
           </div>
