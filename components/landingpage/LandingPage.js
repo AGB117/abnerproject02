@@ -21,8 +21,9 @@ function LandingPage() {
         </div>
       </section>
 
-      <section id="testimonials" className={classes.menuSection}>
-        <h1>Testimonials</h1>
+      <section id="testimonials" className={classes.testimonialsSection}>
+        <div>Testimonials</div>
+        <div>pictures</div>
       </section>
     </Fragment>
   );
