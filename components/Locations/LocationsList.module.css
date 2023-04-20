@@ -1,0 +1,46 @@
+/*
+Container
+*/
+.locationsContainer {
+  width: 100vw;
+  /* background-color: lightgray; */
+}
+
+.grid {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+  width: 100%;
+  height: 100%;
+}
+
+.grid2cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/*
+Locations
+*/
+
+.locationsColumn {
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.locationsHeading {
+  margin-bottom: 3rem;
+}
+
+.locationsColumn ul {
+  list-style: none;
+  font-size: 1.4rem;
+  line-height: 3;
+}
+
+.locationsMap {
+  padding: 6rem;
+}

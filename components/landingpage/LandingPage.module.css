@@ -3,7 +3,8 @@
   row-gap: 9.6rem;
   column-gap: 6.4rem;
   width: 100%;
-  height: 500px;
+  height: 100%;
+  background-color: #e7f5ff;
 }
 
 .grid2cols {
@@ -15,11 +16,11 @@ Hero section
 */
 
 .hero {
-  background-color: #e7f5ff;
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   font-size: 2rem;
-  padding: 40px;
+  padding: 3rem;
+  margin-top: 6rem;
 }
 
 .hero p {
@@ -29,67 +30,76 @@ Hero section
 
 .hero h1 {
   font-size: 5rem;
-  /* text-align: center; */
   color: #343a40;
 }
 
 .imageSection {
+  padding: 6rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.hero img {
+.heroImg {
   border-radius: 5%;
   width: 500px;
-  height: auto;
-  display: flex;
-  position: relative;
-  margin: auto;
 }
 
 /*
 Testimonials
 */
 
+.testimonialsGrid {
+  /* background-color: #e7f5ff; */
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
+  justify-items: center;
+}
+
 .testimonialsSection {
-  padding: 40px 0;
+  padding: 3rem;
 }
 
 .testimonialsSectionImg {
   height: 50px;
   width: 50px;
-  border-radius: 5px;
+  border-radius: 50%;
   margin-bottom: 10px;
 }
 
 .testimonials {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  row-gap: 3rem;
+  column-gap: 5rem;
 }
 
 .testimonial {
 }
 
 .testimonialsHeading {
-  /* margin: 10px; */
   font-size: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
 }
 
 .testimonialsSubheading {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
+  color: #339af0;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
 .testimonialText {
   font-size: 1.4rem;
   line-height: 1.4;
   margin-bottom: 1rem;
+  color: #333;
 }
 
 .testimonialName {
   font-size: 1.2rem;
   font-weight: 300;
+  color: #6f6f6f;
 }
 
 /*
@@ -99,9 +109,21 @@ Testimonial gallery
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.6rem;
+  padding: 1.6rem;
+  /* height: 700px;
+  width: 700px; */
 }
 
-.gallery img {
+.galleryImg img {
+  transition: all 0.4s;
   display: block;
   width: 100%;
+}
+
+.galleryImg img:hover {
+  transform: scale(1.2);
+}
+
+.galleryImg {
+  overflow: hidden;
 }
