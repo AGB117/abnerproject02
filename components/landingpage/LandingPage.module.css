@@ -4,7 +4,6 @@
   column-gap: 6.4rem;
   width: 100%;
   height: 500px;
-  padding-top: 50px;
 }
 
 .grid2cols {
@@ -20,12 +19,11 @@ Hero section
   width: 100%;
   overflow: hidden;
   font-size: 2rem;
-  /* height: 400px; */
+  padding: 40px;
 }
 
 .hero p {
   color: #343a40;
-  margin: 40px;
   font-size: 2.5rem;
 }
 
@@ -33,7 +31,6 @@ Hero section
   font-size: 5rem;
   /* text-align: center; */
   color: #343a40;
-  margin: 40px;
 }
 
 .imageSection {
@@ -56,5 +53,55 @@ Testimonials
 */
 
 .testimonialsSection {
-  background-color: #fff;
+  padding: 40px 0;
+}
+
+.testimonialsSectionImg {
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.testimonial {
+}
+
+.testimonialsHeading {
+  /* margin: 10px; */
+  font-size: 3rem;
+}
+
+.testimonialsSubheading {
+  font-size: 1.2rem;
+}
+
+.testimonialText {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.testimonialName {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/*
+Testimonial gallery
+*/
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.6rem;
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
 }

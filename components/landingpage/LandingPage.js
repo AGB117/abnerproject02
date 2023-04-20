@@ -21,9 +21,86 @@ function LandingPage() {
         </div>
       </section>
 
-      <section id="testimonials" className={classes.testimonialsSection}>
-        <div>Testimonials</div>
-        <div>pictures</div>
+      <section
+        id="testimonials"
+        className={`${classes.testimonialsSection} ${classes.grid} ${classes.grid2cols}`}
+      >
+        <div className={classes.leftcolumn}>
+          <span className={classes.testimonialsSubheading}>Testimonials</span>
+          <h1 className={classes.testimonialsHeading}>
+            See what our costumers are saying!
+          </h1>
+          <div className={classes.testimonials}>
+            <figure className={classes.testimonial}>
+              <img
+                className={classes.testimonialsSectionImg}
+                src="/ColorLogoNoBackground.png"
+              />
+              <blockquote className={classes.testimonialText}>
+                Two patty cheeseburger with ketchup, mayo, lettuce, pickles, and
+                jalapeños! I love the choice of toppings. And of course the
+                fries were delicious!
+              </blockquote>
+              <p className={classes.testimonialName}>&mdash; Bill Johnson</p>
+            </figure>
+            <figure className={classes.testimonial}>
+              <img
+                className={classes.testimonialsSectionImg}
+                src="/ColorLogoNoBackground.png"
+              />
+              <blockquote className={classes.testimonialText}>
+                Two patty cheeseburger with ketchup, mayo, lettuce, pickles, and
+                jalapeños! I love the choice of toppings. And of course the
+                fries were delicious!
+              </blockquote>
+              <p className={classes.testimonialName}>&mdash; Bill Johnson</p>
+            </figure>
+            <figure className={classes.testimonial}>
+              <img
+                className={classes.testimonialsSectionImg}
+                src="/ColorLogoNoBackground.png"
+              />
+              <blockquote className={classes.testimonialText}>
+                Two patty cheeseburger with ketchup, mayo, lettuce, pickles, and
+                jalapeños! I love the choice of toppings. And of course the
+                fries were delicious!
+              </blockquote>
+              <p className={classes.testimonialName}>&mdash; Bill Johnson</p>
+            </figure>
+            <figure className={classes.testimonial}>
+              <img
+                className={classes.testimonialsSectionImg}
+                src="/ColorLogoNoBackground.png"
+              />
+              <blockquote className={classes.testimonialText}>
+                Two patty cheeseburger with ketchup, mayo, lettuce, pickles, and
+                jalapeños! I love the choice of toppings. And of course the
+                fries were delicious!
+              </blockquote>
+              <p className={classes.testimonialName}>&mdash; Bill Johnson</p>
+            </figure>
+          </div>
+        </div>
+        <div className={classes.gallery}>
+          <figure>
+            <img src="/grill.jpg" />
+          </figure>
+          <figure>
+            <img src="/grill.jpg" />
+          </figure>
+          <figure>
+            <img src="/grill.jpg" />
+          </figure>
+          <figure>
+            <img src="/grill.jpg" />
+          </figure>
+          <figure>
+            <img src="/grill.jpg" />
+          </figure>
+          <figure>
+            <img src="/grill.jpg" />
+          </figure>
+        </div>
       </section>
     </Fragment>
   );
