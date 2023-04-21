@@ -1,0 +1,47 @@
+/*
+Container
+*/
+.contactUsContainer {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  /* background-color: lightgray; */
+  justify-content: center;
+}
+
+.formContainer {
+  margin-top: 50px;
+}
+
+.formContainer h1 {
+  margin-bottom: 2rem;
+}
+
+.field {
+  margin-top: 2rem;
+}
+
+.field label {
+  font-size: 2rem;
+}
+.field input {
+  margin-top: 0.5rem;
+  font-size: 1.8rem;
+  padding: 0.1rem 0.3rem;
+  border: 1px solid black;
+}
+
+.submitButton button {
+  margin: 1rem;
+  color: #e7f5ff;
+  background-color: #4dabf7;
+  border: none;
+  border-radius: 10px;
+  font-size: 2rem;
+  padding: 10px 15px;
+}
+
+.comments input {
+  padding: 6rem;
+  /* padding-right: 8rem; */
+}

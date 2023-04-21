@@ -15,13 +15,16 @@ function MainNav() {
           <li>
             <Link href="/menu">Menu</Link>
           </li>
-
           <li>
-            <Link href="/"> About Us</Link>
+            <Link href="/locations">Locations</Link>
           </li>
 
           <li>
-            <Link href="/locations">Locations</Link>
+            <Link href="/aboutus"> About Us</Link>
+          </li>
+
+          <li>
+            <Link href="/contactus">Contact Us</Link>
           </li>
 
           <li>

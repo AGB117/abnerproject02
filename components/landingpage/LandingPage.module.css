@@ -17,7 +17,6 @@ Hero section
 
 .hero {
   width: 100%;
-  /* overflow: hidden; */
   font-size: 2rem;
   padding: 3rem;
   margin-top: 6rem;
@@ -111,22 +110,18 @@ Testimonial gallery
   grid-template-columns: repeat(2, 1fr);
   gap: 1.6rem;
   padding: 1.6rem;
-  /* height: 700px;
-  width: 700px; */
+}
+
+.galleryImg {
+  overflow: hidden;
 }
 
 .galleryImg img {
   transition: all 0.4s;
   display: block;
-  height: 40rem;
-  width: 40rem;
-  /* width: 100%; */
+  width: 100%;
 }
 
 .galleryImg img:hover {
   transform: scale(1.2);
-}
-
-.galleryImg {
-  overflow: hidden;
 }
