@@ -73,19 +73,19 @@ function LandingPage() {
             <img src="/grill.jpg" />
           </figure>
           <figure className={classes.galleryImg}>
-            <img src="/grill.jpg" />
+            <img src="/family.jpg" />
           </figure>
           <figure className={classes.galleryImg}>
-            <img src="/grill.jpg" />
+            <img src="/fries.jpg" />
           </figure>
           <figure className={classes.galleryImg}>
-            <img src="/grill.jpg" />
+            <img src="/spf.jpg" />
           </figure>
           <figure className={classes.galleryImg}>
-            <img src="/grill.jpg" />
+            <img src="/burger2.jpg" />
           </figure>
           <figure className={classes.galleryImg}>
-            <img src="/grill.jpg" />
+            <img src="/burger3.jpg" />
           </figure>
         </div>
       </section>

@@ -17,8 +17,8 @@ function LocationsList(props) {
           <div className={classes.locationsMap}>
             <iframe
               src="https://www.google.com/maps/d/embed?mid=1nMGEeZRsfMHfZ0UUuc8sItSmijgBt9s&ehbc=2E312F"
-              width="580"
-              height="440"
+              width="680"
+              height="540"
             ></iframe>
           </div>
         </div>
