@@ -30,7 +30,7 @@ function LandingPage() {
           </h1>
           <div className={classes.testimonials}>
             <figure className={classes.testimonial}>
-              <img className={classes.testimonialsSectionImg} src="/pfp.jpg" />
+              <img className={classes.testimonialsSectionImg} src="/pfp1.jpg" />
               <blockquote className={classes.testimonialText}>
                 Two patty cheeseburger with ketchup, mayo, lettuce, pickles, and
                 jalapeños! I love the choice of toppings. And of course the
@@ -39,7 +39,7 @@ function LandingPage() {
               <p className={classes.testimonialName}>&mdash; Bill Johnson</p>
             </figure>
             <figure className={classes.testimonial}>
-              <img className={classes.testimonialsSectionImg} src="/pfp.jpg" />
+              <img className={classes.testimonialsSectionImg} src="/pfp2.jpg" />
               <blockquote className={classes.testimonialText}>
                 Two patty cheeseburger with ketchup, mayo, lettuce, pickles, and
                 jalapeños! I love the choice of toppings. And of course the
@@ -48,7 +48,7 @@ function LandingPage() {
               <p className={classes.testimonialName}>&mdash; Bill Johnson</p>
             </figure>
             <figure className={classes.testimonial}>
-              <img className={classes.testimonialsSectionImg} src="/pfp.jpg" />
+              <img className={classes.testimonialsSectionImg} src="/pfp3.jpg" />
               <blockquote className={classes.testimonialText}>
                 Two patty cheeseburger with ketchup, mayo, lettuce, pickles, and
                 jalapeños! I love the choice of toppings. And of course the
@@ -57,7 +57,7 @@ function LandingPage() {
               <p className={classes.testimonialName}>&mdash; Bill Johnson</p>
             </figure>
             <figure className={classes.testimonial}>
-              <img className={classes.testimonialsSectionImg} src="/pfp.jpg" />
+              <img className={classes.testimonialsSectionImg} src="/pfp4.jpg" />
               <blockquote className={classes.testimonialText}>
                 Two patty cheeseburger with ketchup, mayo, lettuce, pickles, and
                 jalapeños! I love the choice of toppings. And of course the

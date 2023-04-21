@@ -1,20 +1,28 @@
 /*
-Container
+Containers
 */
 .contactUsContainer {
   width: 100vw;
   height: auto;
   display: flex;
-  /* background-color: lightgray; */
   justify-content: center;
+  /* background-color: lightgray; */
 }
 
 .formContainer {
-  margin-top: 50px;
+  margin: 3rem;
 }
 
 .formContainer h1 {
   margin-bottom: 2rem;
+}
+
+/*
+  form format
+  */
+
+.formSpacing {
+  padding: 2rem;
 }
 
 .field {
@@ -31,6 +39,17 @@ Container
   border: 1px solid black;
 }
 
+.comments input {
+  padding: 6rem;
+}
+
+/*
+submit button
+*/
+.submitButton {
+  text-align: center;
+}
+
 .submitButton button {
   margin: 1rem;
   color: #e7f5ff;
@@ -39,9 +58,4 @@ Container
   border-radius: 10px;
   font-size: 2rem;
   padding: 10px 15px;
-}
-
-.comments input {
-  padding: 6rem;
-  /* padding-right: 8rem; */
 }
