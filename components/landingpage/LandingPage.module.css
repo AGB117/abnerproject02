@@ -73,8 +73,10 @@ Testimonials
   column-gap: 5rem;
 }
 
-.testimonial {
+/* .testimonial {
+   font-size: 32px;
 }
+*/
 
 .testimonialsHeading {
   font-size: 3rem;
