@@ -46,11 +46,12 @@ Containers
 /*
 submit button
 */
-.submitButton {
-  text-align: center;
+.submitButtonCenter {
+  display: flex;
+  justify-content: center;
 }
 
-.submitButton button {
+.submitButton {
   margin: 1rem;
   color: #e7f5ff;
   background-color: #4dabf7;
@@ -58,4 +59,15 @@ submit button
   border-radius: 10px;
   font-size: 2rem;
   padding: 10px 15px;
+}
+
+.submitButton:hover,
+.submitButton:active {
+  cursor: pointer;
+}
+
+.invalidInput {
+  font-size: 1.5rem;
+  color: red;
+  margin-left: 1rem;
 }
