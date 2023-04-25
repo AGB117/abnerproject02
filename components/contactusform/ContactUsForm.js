@@ -1,63 +1,35 @@
-import { Fragment, useEffect } from "react";
+import { useState, Fragment } from "react";
 import classes from "./ContactUsForm.module.css";
 import Card from "../ui/Card";
-import { useState, useRef } from "react";
+import useValidation from "@/hooks/use-validation";
 
 function ContactUsForm(props) {
-  /*forms*/
-  /*refs*/
-  const nameInputRef = useRef();
   /*state*/
-  const [enteredName, setEnteredName] = useState("");
-  const [enteredNameIsValid, setenteredNameIsValid] = useState(false);
-  const [enteredNameTouched, setEnteredNameTouched] = useState(false);
+  const {
+    value: enteredName,
+    isValid: enteredNameIsValid,
+    hasError: nameInputHasError,
+    valueChangeHandler: nameChangeHandler,
+    inputBlurHandler: nameBlurHandler,
+    reset: resetNameInput,
+  } = useValidation((value) => value.trim() !== "");
 
-  //effect
-
-  useEffect(() => {}, [enteredNameIsValid]);
-  /*handlers*/
-  const nameInputChangeHandler = (event) => {
-    /*onChange prob produces an event in the dom ,you can accese the value of the input in event.target.value*/
-
-    setEnteredName(event.target.value);
-
-    if (enteredName.trim() !== "") {
-      setenteredNameIsValid(true);
-    }
-  };
+  let formIsValid = false;
+  if (enteredNameIsValid) {
+    formIsValid = true;
+  }
 
   const formSubmissionHandler = (event) => {
     event.preventDefault();
-    //check for empty fields, must be placed at the bregining to cancel consecuent form handler execution
-    setEnteredNameTouched(true);
 
-    if (enteredName.trim() === "") {
-      setenteredNameIsValid(false);
+    if (!enteredNameIsValid) {
       return;
     }
 
-    setenteredNameIsValid(true);
-
-    console.log(enteredName);
-
-    const enteredValue = nameInputRef.current.value;
-    console.log(enteredValue);
-
     /*reset fields*/
-    // nameInputRef.current.value="" dont manipulate the dom with vanilla js
-    setEnteredName("");
+    resetNameInput();
+    // setEnteredNameTouched(false);
   };
-
-  const nameInputBlurHandler = (event) => {
-    setEnteredNameTouched(true);
-    //validation
-    if (enteredName.trim() === "") {
-      setenteredNameIsValid(false);
-    }
-  };
-
-  /*export both validations into a variable*/
-  const nameInputIsInvalid = !enteredNameIsValid && enteredNameTouched;
 
   return (
     <Fragment>
@@ -73,14 +45,13 @@ function ContactUsForm(props) {
                 <label htmlFor="name">First Name:</label>
                 <div>
                   <input
-                    onBlur={nameInputBlurHandler}
+                    onBlur={nameBlurHandler}
                     value={enteredName}
-                    ref={nameInputRef}
                     id="name"
                     type="text"
-                    onChange={nameInputChangeHandler}
+                    onChange={nameChangeHandler}
                   />
-                  {nameInputIsInvalid && (
+                  {nameInputHasError && (
                     <span className={classes.invalidInput}>Invalid input!</span>
                   )}
                 </div>
@@ -115,7 +86,12 @@ function ContactUsForm(props) {
                 </div>
               </div>
               <div className={classes.submitButtonCenter}>
-                <button className={classes.submitButton}>Submit</button>
+                <button
+                  className={classes.submitButton}
+                  disabled={!formIsValid}
+                >
+                  Submit
+                </button>
               </div>
             </form>
           </Card>

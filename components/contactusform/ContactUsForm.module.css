@@ -71,3 +71,11 @@ submit button
   color: red;
   margin-left: 1rem;
 }
+
+.submitButton:disabled,
+.submitButton:disabled:hover,
+.submitButton:disabled:active {
+  cursor: not-allowed;
+  background-color: lightgrey;
+  color: #212529;
+}
