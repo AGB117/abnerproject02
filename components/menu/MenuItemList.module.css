@@ -1,32 +1,41 @@
-.menuItems {
-  text-align: center;
-}
-
 .menuItems h1 {
+  text-align: center;
   font-size: 5rem;
   color: #212529;
   margin-top: 20px;
   margin-bottom: 40px;
 }
 .menuItems ul {
-  margin-top: 25px;
+  margin-top: 2.5rem; /*this gives the entire list a margin on top but doesn't affect when there is multiple rows of items*/
   list-style: none;
+  justify-items: center;
 }
 
+.menuItems li {
+  margin-bottom: auto;
+}
+/* .center {
+  justify-items: center;
+  justify-content: center;
+} */
+
 .container {
-  max-width: 100rem;
-  margin: 10px 10px;
-  padding: 10px 3.2rem;
+  max-width: 100vw;
+  margin: 3rem 6.8rem;
+  /* margin: 3rem 10vw; for media queries */
 }
 
 .grid {
   display: grid;
-  row-gap: 9.6rem;
-  column-gap: 6.4rem;
+  row-gap: 6.4rem;
+  column-gap: 3rem;
+  /* display: flex; for media queries */
+  /* flex-direction: column; for media queries */
+  /* row-gap: 3rem; for media queries */
 }
 
 .grid3Cols {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 37rem);
 }
 
 .btnCategoryActive {
@@ -47,6 +56,7 @@
 
 .btnContainer {
   margin-top: 20px;
+  text-align: center;
 }
 
 .btnCategoryInactive {

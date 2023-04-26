@@ -35,7 +35,7 @@ function ContactUsForm(props) {
     <Fragment>
       <div className={classes.contactUsContainer}>
         <div className={classes.formContainer}>
-          <Card>
+          <div className={classes.formCard}>
             <form
               className={classes.formSpacing}
               onSubmit={formSubmissionHandler}
@@ -94,7 +94,7 @@ function ContactUsForm(props) {
                 </button>
               </div>
             </form>
-          </Card>
+          </div>
         </div>
       </div>
     </Fragment>

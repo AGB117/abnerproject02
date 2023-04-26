@@ -64,6 +64,16 @@ const DUMMY_MENU = [
     image:
       "https://images.unsplash.com/photo-1605712916345-6ef6bcc2e29c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80",
   },
+
+  {
+    id: "m7",
+    name: "Classic Burger",
+    description: "Our classic burger",
+    price: 1.99,
+    calories: 250,
+    category: "burgers",
+    image: "/burger5.jpg",
+  },
 ];
 
 // const menuFilterByBurger = DUMMY_MENU.filter(

@@ -21,6 +21,15 @@ Containers
   form format
   */
 
+.formCard {
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.085);
+  border-radius: 11px;
+  transition: all 0.3s;
+  width: auto;
+  /* width: 90vw;for media query */
+  height: auto;
+}
+
 .formSpacing {
   padding: 2rem;
 }
@@ -33,14 +42,19 @@ Containers
   font-size: 2rem;
 }
 .field input {
+  height: 2.5rem;
+  width: 40rem;
+  /*width: 80vw; for media query*/
   margin-top: 0.5rem;
   font-size: 1.8rem;
-  padding: 0.1rem 0.3rem;
+  padding: 1.2rem 0.5rem;
   border: 1px solid black;
 }
 
 .comments input {
-  padding: 6rem;
+  height: 16rem;
+  width: 40rem;
+  padding: 0.1rem 0.5rem;
 }
 
 /*

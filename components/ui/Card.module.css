@@ -3,4 +3,6 @@
   border-radius: 11px;
   overflow: hidden;
   transition: all 0.3s;
+  width: 35rem;
+  height: 50rem;
 }

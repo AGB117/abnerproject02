@@ -76,24 +76,27 @@ function MenuItemList(props) {
             Drinks
           </button>
         </div>
-        {/* <p style={{ fontSize: "20px" }}>{category}</p> */}
+        {/* <div className={classes.center}> */}
         <ul
           className={`${classes.container} ${classes.grid} ${classes.grid3Cols}`}
         >
           {props.menuItems.map((menuItem) => (
-            <MenuItems
-              key={menuItem.id}
-              id={menuItem.id}
-              description={menuItem.description}
-              price={menuItem.price}
-              name={menuItem.name}
-              image={menuItem.image}
-              calories={menuItem.calories}
-              category={menuItem.category}
-            />
+            <div>
+              <MenuItems
+                key={menuItem.id}
+                id={menuItem.id}
+                description={menuItem.description}
+                price={menuItem.price}
+                name={menuItem.name}
+                image={menuItem.image}
+                calories={menuItem.calories}
+                category={menuItem.category}
+              />
+            </div>
           ))}
         </ul>
       </div>
+      {/* </div> */}
     </Fragment>
   );
 }
