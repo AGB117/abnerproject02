@@ -4,7 +4,7 @@ import Card from "../ui/Card";
 import useValidation from "@/hooks/use-validation";
 
 function ContactUsForm(props) {
-  /*state*/
+  /*name state*/
   const {
     value: enteredName,
     isValid: enteredNameIsValid,
@@ -13,22 +13,73 @@ function ContactUsForm(props) {
     inputBlurHandler: nameBlurHandler,
     reset: resetNameInput,
   } = useValidation((value) => value.trim() !== "");
+  /*last name state*/
+  const {
+    value: enteredLastName,
+    isValid: enteredLastNameIsValid,
+    hasError: lastNameInputHasError,
+    valueChangeHandler: lastNameChangeHandler,
+    inputBlurHandler: lastNameBlurHandler,
+    reset: resetLastNameInput,
+  } = useValidation((value) => value.trim() !== "");
+  /*email state*/
+  const {
+    value: enteredEmail,
+    isValid: enteredEmailIsValid,
+    hasError: emailInputHasError,
+    valueChangeHandler: emailChangeHandler,
+    inputBlurHandler: emailBlurHandler,
+    reset: resetEmailInput,
+  } = useValidation((value) => value.trim() !== "" && value.includes("@"));
 
+  /*phone state*/
+  const {
+    value: enteredPhone,
+    isValid: enteredPhoneIsValid,
+    hasError: phoneInputHasError,
+    valueChangeHandler: phoneChangeHandler,
+    inputBlurHandler: phoneBlurHandler,
+    reset: resetPhoneInput,
+  } = useValidation((value) => value.trim() !== "");
+  /*comments state*/
+  const {
+    value: enteredComments,
+    isValid: enteredCommentsIsValid,
+    hasError: commentsInputHasError,
+    valueChangeHandler: commentsChangeHandler,
+    inputBlurHandler: commentsBlurHandler,
+    reset: resetCommentsInput,
+  } = useValidation((value) => value.trim() !== "");
+  //form validation
   let formIsValid = false;
-  if (enteredNameIsValid) {
+  if (
+    enteredNameIsValid &&
+    enteredLastNameIsValid &&
+    enteredEmailIsValid &&
+    enteredPhoneIsValid &&
+    enteredCommentsIsValid
+  ) {
     formIsValid = true;
   }
 
   const formSubmissionHandler = (event) => {
     event.preventDefault();
 
-    if (!enteredNameIsValid) {
+    if (
+      !enteredNameIsValid &&
+      !enteredLastNameIsValid &&
+      !enteredEmailIsValid &&
+      !enteredPhoneIsValid &&
+      enteredCommentsIsValid
+    ) {
       return;
     }
 
     /*reset fields*/
     resetNameInput();
-    // setEnteredNameTouched(false);
+    resetLastNameInput();
+    resetEmailInput();
+    resetPhoneInput();
   };
 
   return (
@@ -43,6 +94,9 @@ function ContactUsForm(props) {
               <h1>Contact us</h1>
               <div className={classes.field}>
                 <label htmlFor="name">First Name:</label>
+                {nameInputHasError && (
+                  <span className={classes.invalidInput}>Invalid input!</span>
+                )}
                 <div>
                   <input
                     onBlur={nameBlurHandler}
@@ -52,18 +106,18 @@ function ContactUsForm(props) {
                     id="name"
                     name="name"
                   />
-                  {nameInputHasError && (
-                    <span className={classes.invalidInput}>Invalid input!</span>
-                  )}
                 </div>
               </div>
               <div className={classes.field}>
                 <label htmlFor="lastname">Last Name:</label>
+                {lastNameInputHasError && (
+                  <span className={classes.invalidInput}>Invalid input!</span>
+                )}
                 <div>
                   <input
-                    // onBlur={""}
-                    // value={""}
-                    // onChange={""}
+                    onBlur={lastNameBlurHandler}
+                    value={enteredLastName}
+                    onChange={lastNameChangeHandler}
                     type="text"
                     id="lastname"
                     name="lastname"
@@ -72,11 +126,14 @@ function ContactUsForm(props) {
               </div>
               <div className={classes.field}>
                 <label htmlFor="email">email:</label>
+                {emailInputHasError && (
+                  <span className={classes.invalidInput}>Invalid email!</span>
+                )}
                 <div>
                   <input
-                    // onBlur={""}
-                    // value={""}
-                    // onChange={""}
+                    onBlur={emailBlurHandler}
+                    value={enteredEmail}
+                    onChange={emailChangeHandler}
                     type="email"
                     id="email"
                     name="email"
@@ -87,12 +144,17 @@ function ContactUsForm(props) {
                 <label htmlFor="phone" className={classes.formLabel}>
                   phone:
                 </label>
+                {phoneInputHasError && (
+                  <span className={classes.invalidInput}>
+                    Invalid phone number!
+                  </span>
+                )}
                 <div>
                   <input
-                    // onBlur={""}
-                    // value={""}
-                    // onChange={""}
-                    type="tel"
+                    onBlur={phoneBlurHandler}
+                    value={enteredPhone}
+                    onChange={phoneChangeHandler}
+                    type="number"
                     id="phone"
                     name="phone"
                     placeholder="(_ _ _) _ _ _- _ _ _ _"
@@ -104,8 +166,20 @@ function ContactUsForm(props) {
                 <label htmlFor="comments" className={classes.formLabel}>
                   comments:
                 </label>
+                {commentsInputHasError && (
+                  <span className={classes.invalidInput}>
+                    Invalid phone number!
+                  </span>
+                )}
                 <div className={classes.comments}>
-                  <input id="comments" type="text" />
+                  <textarea
+                    onBlur={commentsBlurHandler}
+                    value={enteredComments}
+                    onChange={commentsChangeHandler}
+                    id="comments"
+                    type="text"
+                    placeholder="Your Comments"
+                  ></textarea>
                 </div>
               </div>
               <div className={classes.submitButtonCenter}>
