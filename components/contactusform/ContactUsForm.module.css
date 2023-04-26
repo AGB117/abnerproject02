@@ -6,7 +6,7 @@ Containers
   height: auto;
   display: flex;
   justify-content: center;
-  /* background-color: lightgray; */
+  background-color: #f7f7f7;
 }
 
 .formContainer {
@@ -18,10 +18,11 @@ Containers
 }
 
 /*
-  form format
-  */
+form format
+*/
 
 .formCard {
+  background-color: #fff;
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.085);
   border-radius: 11px;
   transition: all 0.3s;

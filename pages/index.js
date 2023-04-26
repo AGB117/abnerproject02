@@ -8,6 +8,7 @@ function HomePage() {
       <Head>
         <title>Burger Place</title>
         <meta name="description" content="website for restaurant" />
+        <link rel="icon" type="image/x-icon" href="/favicon.png" />
       </Head>
       <LandingPage />
     </Fragment>

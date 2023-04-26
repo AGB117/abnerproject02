@@ -48,7 +48,7 @@ Testimonials
 */
 
 .testimonialsGrid {
-  /* background-color: #e7f5ff; */
+  /* background-color: #f7f7f7; */
   display: grid;
   grid-template-columns: 55fr 45fr;
   align-items: center;

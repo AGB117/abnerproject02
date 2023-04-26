@@ -47,9 +47,10 @@ function ContactUsForm(props) {
                   <input
                     onBlur={nameBlurHandler}
                     value={enteredName}
-                    id="name"
-                    type="text"
                     onChange={nameChangeHandler}
+                    type="text"
+                    id="name"
+                    name="name"
                   />
                   {nameInputHasError && (
                     <span className={classes.invalidInput}>Invalid input!</span>
@@ -59,13 +60,27 @@ function ContactUsForm(props) {
               <div className={classes.field}>
                 <label htmlFor="lastname">Last Name:</label>
                 <div>
-                  <input id="lastname" />
+                  <input
+                    // onBlur={""}
+                    // value={""}
+                    // onChange={""}
+                    type="text"
+                    id="lastname"
+                    name="lastname"
+                  />
                 </div>
               </div>
               <div className={classes.field}>
                 <label htmlFor="email">email:</label>
                 <div>
-                  <input id="email" type="email" />
+                  <input
+                    // onBlur={""}
+                    // value={""}
+                    // onChange={""}
+                    type="email"
+                    id="email"
+                    name="email"
+                  />
                 </div>
               </div>
               <div className={classes.field}>
@@ -73,7 +88,15 @@ function ContactUsForm(props) {
                   phone:
                 </label>
                 <div>
-                  <input id="phone" type="phone" />
+                  <input
+                    // onBlur={""}
+                    // value={""}
+                    // onChange={""}
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="(_ _ _) _ _ _- _ _ _ _"
+                  />
                 </div>
               </div>
 
