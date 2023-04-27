@@ -22,17 +22,18 @@ letter spacing
 1px
 
 --- 02 COLORS      
-Primary: #4dabf7
-light: #e7f5ff
-shade: #339AF0
-white: #fff
+Primary: #4dabf7;
+light: #e7f5ff;
+shade: #339AF0;
+white: #fff;
+offwhite: #f7f7f7;
 tints:
 shades:
 accents:
 greys:
-#212529
-#333
-#6f6f6f
+#212529;
+#333;
+#6f6f6f;
 
 --- 03 Shadows
 
@@ -63,6 +64,7 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  background-color: #f7f7f7;
 }
 
 body {
@@ -73,3 +75,21 @@ body {
   /* only works if theres nothing aboslutely position in relation to body */
   overflow-x: hidden;
 }
+
+/*
+reusable components
+*/
+
+/* .grid {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+  width: 100%;
+  height: 100%;
+  background-color: transparent !important;
+  background-color: #e7f5ff;
+}
+
+.grid2cols {
+  grid-template-columns: repeat(2, 1fr);
+} */

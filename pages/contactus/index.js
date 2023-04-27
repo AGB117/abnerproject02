@@ -7,6 +7,7 @@ function ContactUs(props) {
     <Fragment>
       <Head>
         <title>Burger Place | Contact Us</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.png" />
       </Head>
       <ContactUsFrom />
     </Fragment>

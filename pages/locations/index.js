@@ -7,6 +7,7 @@ function Locations(props) {
     <Fragment>
       <Head>
         <title>Burger Place | Locations</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.png" />
       </Head>
       <LocationsList />
     </Fragment>

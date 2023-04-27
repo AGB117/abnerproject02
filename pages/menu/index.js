@@ -98,6 +98,7 @@ function Menu(props) {
     <Fragment>
       <Head>
         <title>Burger Place | Menu</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.png" />
       </Head>
       <MenuItemList
         onChangeCategory={onChangeCategoryHandler}

@@ -4,11 +4,12 @@ import classes from "./LandingPage.module.css";
 function LandingPage() {
   return (
     <Fragment>
-      <section id="hero" className={classes.heroBackgroundImg}>
-        <div className={classes.heroContainer}>
-          <h1>The best burgers in the city of Orlando!</h1>
-
-          <p>Our burgers are made with 100% angus beef, never frozen!!</p>
+      <section id="hero" className={classes.heroSection}>
+        <div className={classes.heroBackgroundImg}>
+          <div className={classes.heroContainer}>
+            <h1>The best burgers in the city of Orlando!</h1>
+            <p>Our burgers are made with 100% angus beef, never frozen!!</p>
+          </div>
         </div>
       </section>
 

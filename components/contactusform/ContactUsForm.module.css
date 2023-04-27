@@ -3,10 +3,10 @@ Containers
 */
 .contactUsContainer {
   width: 100vw;
-  height: auto;
   display: flex;
   justify-content: center;
   background-color: #f7f7f7;
+  /* margin-bottom: 0; */
 }
 
 .formContainer {
@@ -50,6 +50,10 @@ form format
   padding: 1.4rem 0.5rem;
   border: 1px solid black;
   /*width: 80vw; for media query*/
+}
+
+.field input:invalid {
+  border: red solid 1px;
 }
 
 .comments textarea {
