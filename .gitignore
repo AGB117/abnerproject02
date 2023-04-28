@@ -33,3 +33,4 @@ yarn-error.log*
 
 #local folders to ignore
 DesignDocs/
+unsplash/
