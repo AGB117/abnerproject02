@@ -181,6 +181,7 @@ function ContactUsForm(props) {
                     id="comments"
                     type="text"
                     placeholder="Your Comments"
+                    required
                   ></textarea>
                 </div>
               </div>
