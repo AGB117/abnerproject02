@@ -21,7 +21,10 @@ function LandingPage() {
           </h1>
           <div className={classes.testimonials}>
             <figure className={classes.testimonial}>
-              <img className={classes.testimonialsSectionImg} src="/pfp1.jpg" />
+              <img
+                className={classes.testimonialsSectionImg}
+                src="/pfp1.webp"
+              />
               <blockquote className={classes.testimonialText}>
                 Two patty cheeseburger with ketchup, mayo, lettuce, pickles, and
                 jalapeños! I love the choice of toppings. And of course the
@@ -30,7 +33,10 @@ function LandingPage() {
               <p className={classes.testimonialName}>&mdash; Bill Johnson</p>
             </figure>
             <figure className={classes.testimonial}>
-              <img className={classes.testimonialsSectionImg} src="/pfp2.jpg" />
+              <img
+                className={classes.testimonialsSectionImg}
+                src="/pfp2.webp"
+              />
               <blockquote className={classes.testimonialText}>
                 Two patty cheeseburger with ketchup, mayo, lettuce, pickles, and
                 jalapeños! I love the choice of toppings. And of course the
@@ -39,7 +45,10 @@ function LandingPage() {
               <p className={classes.testimonialName}>&mdash; Bill Johnson</p>
             </figure>
             <figure className={classes.testimonial}>
-              <img className={classes.testimonialsSectionImg} src="/pfp3.jpg" />
+              <img
+                className={classes.testimonialsSectionImg}
+                src="/pfp3.webp"
+              />
               <blockquote className={classes.testimonialText}>
                 Two patty cheeseburger with ketchup, mayo, lettuce, pickles, and
                 jalapeños! I love the choice of toppings. And of course the
@@ -48,7 +57,10 @@ function LandingPage() {
               <p className={classes.testimonialName}>&mdash; Bill Johnson</p>
             </figure>
             <figure className={classes.testimonial}>
-              <img className={classes.testimonialsSectionImg} src="/pfp4.jpg" />
+              <img
+                className={classes.testimonialsSectionImg}
+                src="/pfp4.webp"
+              />
               <blockquote className={classes.testimonialText}>
                 Two patty cheeseburger with ketchup, mayo, lettuce, pickles, and
                 jalapeños! I love the choice of toppings. And of course the
@@ -61,22 +73,22 @@ function LandingPage() {
 
         <div className={classes.gallery}>
           <figure className={classes.galleryImg}>
-            <img src="/grill.jpg" />
+            <img src="/gallery1.webp" />
           </figure>
           <figure className={classes.galleryImg}>
-            <img src="/family.jpg" />
+            <img src="/gallery2.webp" />
           </figure>
           <figure className={classes.galleryImg}>
-            <img src="/fries.jpg" />
+            <img src="/gallery3.webp" />
           </figure>
           <figure className={classes.galleryImg}>
-            <img src="/spf.jpg" />
+            <img src="/gallery4.webp" />
           </figure>
           <figure className={classes.galleryImg}>
-            <img src="/burger2.jpg" />
+            <img src="/gallery5.webp" />
           </figure>
           <figure className={classes.galleryImg}>
-            <img src="/burger3.jpg" />
+            <img src="/gallery6.webp" />
           </figure>
         </div>
       </section>

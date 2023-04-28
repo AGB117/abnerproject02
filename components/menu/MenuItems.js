@@ -8,7 +8,8 @@ import Card from "../ui/Card";
 
 function MenuItemList(props) {
   return (
-    <li>
+    <div //this is a lis <div>
+    >
       <Card>
         <img className={classes.image} src={props.image}></img>
         <p className={classes.name}>{props.name}</p>
@@ -44,7 +45,7 @@ function MenuItemList(props) {
           <p className={classes.price}>{props.price}</p>
         </div>
       </Card>
-    </li>
+    </div> //this is a lisr <li>
   );
 }
 

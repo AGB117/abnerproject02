@@ -77,7 +77,7 @@ function MenuItemList(props) {
           </button>
         </div>
         {/* <div className={classes.center}> */}
-        <ul
+        <div //this is a list <ul>
           className={`${classes.container} ${classes.grid} ${classes.grid3Cols}`}
         >
           {props.menuItems.map((menuItem) => (
@@ -94,7 +94,7 @@ function MenuItemList(props) {
               />
             </div>
           ))}
-        </ul>
+        </div>
       </div>
       {/* </div> */}
     </Fragment>

@@ -10,7 +10,7 @@ Hero section
 }
 
 .heroBackgroundImg {
-  background-image: url("/banner2-1.jpg");
+  background-image: url("/banner2-1.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -72,11 +72,6 @@ Testimonials
   row-gap: 3rem;
   column-gap: 5rem;
 }
-
-/* .testimonial {
-   font-size: 32px;
-}
-*/
 
 .testimonialsHeading {
   font-size: 3rem;
