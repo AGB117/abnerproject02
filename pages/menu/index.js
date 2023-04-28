@@ -66,7 +66,7 @@ const DUMMY_MENU = [
     price: 1.99,
     calories: 250,
     category: "burgers",
-    image: "/burger5.jpg",
+    image: "/burger4.webp",
   },
 ];
 
