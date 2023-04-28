@@ -16,6 +16,7 @@ Container
 
 .grid2cols {
   grid-template-columns: repeat(2, 1fr);
+  /*need to make reactive with media queries*/
 }
 
 /*
