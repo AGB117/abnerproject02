@@ -6,7 +6,7 @@ Hero section
   height: 95vh;
   display: flex;
   justify-content: center;
-  align-items: start;
+  /* align-items: start; */
 }
 
 .heroBackgroundImg {

@@ -20,7 +20,7 @@ function MainNav() {
           </li>
 
           <li>
-            <Link href="/aboutus"> About Us</Link>
+            <Link href="/"> About Us</Link>
           </li>
 
           <li>
