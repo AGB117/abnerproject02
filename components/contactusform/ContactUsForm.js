@@ -1,6 +1,5 @@
 import { useState, Fragment } from "react";
 import classes from "./ContactUsForm.module.css";
-import Card from "../ui/Card";
 import useValidation from "@/hooks/use-validation";
 
 function ContactUsForm(props) {

@@ -20,25 +20,28 @@ Hero section
   height: 90vh;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+  align-content: center;
   /* background-attachment: fixed; */
 }
 
 .heroContainer {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-items: center;
   margin-top: 25rem;
 }
 
 .heroContainer h1 {
   margin-bottom: 5rem;
-  text-align: center;
+  /* text-align: center; */
   color: #fff;
   font-size: 6rem;
 }
 
 .heroContainer p {
-  text-align: center;
+  /* text-align: center; */
   color: #fff;
   font-size: 3rem;
 }
