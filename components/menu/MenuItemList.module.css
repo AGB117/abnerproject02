@@ -14,14 +14,10 @@
 .menuItems li {
   margin-bottom: auto;
 }
-/* .center {
-  justify-items: center;
-  justify-content: center;
-} */
 
-.container {
-  width: 100vw;
+.gridContainer {
   margin: 3rem 6.8rem;
+  justify-content: center;
   /* margin: 3rem 10vw; for media queries */
 }
 
@@ -29,7 +25,7 @@
   display: flex;
   row-gap: 6.4rem;
   column-gap: 3rem;
-  /* flex-direction: column; for media queries */
+  /*flex-direction: column; for media queries */
   /* row-gap: 3rem; for media queries */
 }
 
