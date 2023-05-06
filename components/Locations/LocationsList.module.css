@@ -1,9 +1,5 @@
-/*
-Container
-*/
 .locationsContainer {
   width: 100vw;
-  /* background-color: lightgray; */
 }
 
 .grid {
@@ -17,10 +13,6 @@ Container
 .grid2cols {
   grid-template-columns: repeat(2, 1fr);
 }
-
-/*
-Locations
-*/
 
 .locationsColumn {
   margin: 3rem;
@@ -36,10 +28,10 @@ Locations
   font-size: 4rem;
 }
 
-.locationsColumn ul {
-  list-style: none;
+.locationsColumn span {
   font-size: 2rem;
   line-height: 3;
+  letter-spacing: 0.1rem;
 }
 
 .locationsMap {

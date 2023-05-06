@@ -8,11 +8,9 @@ function LocationsList(props) {
         <div className={`${classes.grid} ${classes.grid2cols}`}>
           <div className={classes.locationsColumn}>
             <h1 className={classes.locationsHeading}>Locations</h1>
-            <ul>
-              <li> 555 Somewhere St Orlando, Florida 33888</li>
-              <li>407-863-5555</li>
-              <li>burger.place@burger.com</li>
-            </ul>
+            <span> 555 Somewhere St Orlando, Florida 33888</span>
+            <span>407-863-5555</span>
+            <span>burger.place@burger.com</span>
           </div>
           <div className={classes.locationsMap}>
             <iframe
