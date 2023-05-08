@@ -2,6 +2,8 @@
   width: 100vw;
   height: 75vh;
   display: flex;
+  /* min-height: 75vh; */
+  /* max-height: 75vh; */
 }
 
 .grid {
