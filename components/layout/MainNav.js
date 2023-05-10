@@ -28,7 +28,7 @@ function MainNav() {
           </li>
 
           <li>
-            <Link href="/">
+            <Link href="/order">
               <button className={classes.orderButton}>Order Now</button>
             </Link>
           </li>

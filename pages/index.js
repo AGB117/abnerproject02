@@ -6,7 +6,7 @@ function HomePage() {
   return (
     <Fragment>
       <Head>
-        <title>Burger Place</title>
+        <title>Burger Place | Home</title>
         <meta name="description" content="website for restaurant" />
         <link rel="icon" type="image/x-icon" href="/favicon.png" />
       </Head>
