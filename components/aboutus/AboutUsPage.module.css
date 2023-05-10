@@ -1,19 +1,15 @@
 .aboutUsContainer {
   width: 100vw;
   height: 75vh;
-  display: flex;
-  /* min-height: 75vh; */
-  /* max-height: 75vh; */
 }
 
 .grid {
   display: grid;
-  row-gap: 9.6rem;
-  column-gap: 5rem;
-  width: 100%;
   height: 100%;
+  height: 100%;
+  padding: 1rem 1rem;
+  column-gap: 2rem;
   background-color: transparent !important;
-  background-color: #f7f7f7;
 }
 
 .grid2cols {
@@ -22,8 +18,8 @@
 
 .imageContainer {
   display: flex;
-  justify-content: end;
   flex-wrap: wrap;
+  justify-content: end;
   align-content: center;
 }
 
@@ -35,12 +31,14 @@
 
 .storyContainer {
   font-size: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
   margin-right: 5rem;
 }
 
 .storyContainer h1 {
   font-size: 4rem;
-  margin-top: 13rem;
 }
 
 .storyContainer p {

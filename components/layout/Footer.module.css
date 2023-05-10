@@ -1,3 +1,11 @@
+.footer {
+  background-color: #f7f7f7;
+  padding: 5rem 0;
+  margin-top: auto;
+  border-top: 1px solid;
+  border-color: #919191;
+}
+
 .grid {
   display: grid;
   row-gap: 9.6rem;
@@ -6,14 +14,6 @@
 
 .gridTemplateFooter {
   grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
-}
-
-.footer {
-  background-color: #f7f7f7;
-  padding: 5rem 0;
-  margin-top: auto;
-  border-top: 1px solid;
-  border-color: #919191;
 }
 
 .footerLogo {
