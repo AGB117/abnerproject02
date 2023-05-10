@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  width: 100vw;
+  height: 50vh;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+}
+
+.container h1 {
+  margin-bottom: 5rem;
+}
+
+.returnButton {
+  color: #e7f5ff;
+  background-color: #4dabf7;
+  border: none;
+  border-radius: 1rem;
+  font-size: 2rem;
+  padding: 1rem 1.5rem;
+}
+
+.returnButton:hover,
+.returnButton:active {
+  background-color: #339af0;
+  cursor: pointer;
+}
