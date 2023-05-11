@@ -9,7 +9,7 @@ function Locations(props) {
         <title>Burger Place | Locations</title>
         <link rel="icon" type="image/x-icon" href="/favicon.png" />
       </Head>
-      <LocationsList />
+      {/* <LocationsList /> */}
     </Fragment>
   );
 }
