@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import Head from "next/head";
-// import LocationsList from "../../components/locations/LocationsList";
+import LocationsList from "../../components/locationspage/LocationsList";
 
 function Locations(props) {
   return (
@@ -9,7 +9,7 @@ function Locations(props) {
         <title>Burger Place | Locations</title>
         <link rel="icon" type="image/x-icon" href="/favicon.png" />
       </Head>
-      {/* <LocationsList /> */}
+      <LocationsList />
     </Fragment>
   );
 }
