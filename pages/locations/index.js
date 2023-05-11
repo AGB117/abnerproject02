@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import Head from "next/head";
-import LocationsList from "../../components/locations/LocationsList";
+// import LocationsList from "../../components/locations/LocationsList";
 
 function Locations(props) {
   return (
