@@ -1,13 +1,15 @@
 import Layout from "../components/layout/Layout";
 import "../styles/globals.css";
-// import NewsPage from "./news";
-// import HomePage from ".";
+import store from "../store/index";
+import { Provider } from "react-redux";
 
 function App({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <Provider store={store}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </Provider>
   );
 }
 
