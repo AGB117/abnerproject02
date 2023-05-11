@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import classes from "./locationsList.module.css";
+import classes from "./LocationsList.module.css";
 
 function LocationsList(props) {
   return (
