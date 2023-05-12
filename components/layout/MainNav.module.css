@@ -6,13 +6,7 @@
   background-color: #e7f5ff;
   font-size: 2rem;
   font-weight: 400;
-  /* border-bottom: 1px solid; */
   border-color: #919191;
-
-  /* positioning */
-  /* z-index: 2;*/
-  /* position: sticky; */
-  /* top: 0; */
 }
 
 .header ul {
@@ -72,13 +66,22 @@
   cursor: pointer;
 }
 
+.totalCartItems {
+  font-size: 3rem;
+  position: absolute;
+  z-index: 10;
+  color: red;
+  font-weight: 500;
+  transform: translate(1rem, -2rem);
+}
+
 /*//////////////
 ////IMAGE//////
 /////////////*/
 
 .logo img {
-  width: 280px;
-  height: 80px;
-  margin-top: 5px;
-  margin-left: 5px;
+  width: 28rem;
+  height: 8rem;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
 }

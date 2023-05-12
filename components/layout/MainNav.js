@@ -1,8 +1,13 @@
 import Link from "next/link";
 import classes from "./MainNav.module.css";
 import { ShoppingCart } from "@phosphor-icons/react";
+import { useSelector } from "react-redux";
 
 function MainNav() {
+  const cartItems = useSelector((state) => state.cart.totalCartItems);
+
+  const cartItemZero = cartItems === 0 ? false : true;
+
   return (
     <header className={classes.header}>
       <div className={classes.logo}>
@@ -36,6 +41,9 @@ function MainNav() {
           <li>
             <Link href="/">
               <button className={classes.cartContainer}>
+                <div className={classes.totalCartItems}>
+                  {cartItemZero && cartItems}
+                </div>
                 <ShoppingCart
                   className={classes.cartLogo}
                   size={30}

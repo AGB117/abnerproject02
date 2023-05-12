@@ -1,0 +1,14 @@
+.orderItems {
+  font-size: 2rem;
+  margin-left: 5rem;
+  display: flex;
+}
+
+.img img {
+  height: 10rem;
+  width: 10rem;
+}
+
+.orderItems button {
+  padding: 1rem;
+}
