@@ -4,9 +4,9 @@ import { ShoppingCart } from "@phosphor-icons/react";
 import { useSelector } from "react-redux";
 
 function MainNav() {
-  const cartItems = useSelector((state) => state.cart.totalCartItems);
+  const cartItems = useSelector((state) => state.cart.cartItems);
 
-  const cartItemZero = cartItems === 0 ? false : true;
+  const cartItemZero = cartItems.length === 0 ? false : true;
 
   return (
     <header className={classes.header}>
@@ -42,7 +42,7 @@ function MainNav() {
             <Link href="/">
               <button className={classes.cartContainer}>
                 <div className={classes.totalCartItems}>
-                  {cartItemZero && cartItems}
+                  {cartItemZero && cartItems.length}
                 </div>
                 <ShoppingCart
                   className={classes.cartLogo}

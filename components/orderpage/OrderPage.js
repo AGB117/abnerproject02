@@ -1,15 +1,58 @@
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../../store/cart-slice";
 import Card from "../ui/Card";
 import classes from "./OrderPage.module.css";
 import { restaurantMenu } from "@/store/menu";
-import MenuItems from "../menu/MenuItems";
 
 function OrderPage(props) {
   const dispatch = useDispatch();
 
-  //Handlers
+  //handlers
+  const addToCartHandler = (item) => {
+    dispatch(cartActions.addItemCart());
+    dispatch(cartActions.pushCartItem(item));
+    dispatch(cartActions.calculateTotalPriceCart());
+  };
+
+  const removeToCartHandler = (item) => {
+    dispatch(cartActions.removeItemCart());
+    dispatch(cartActions.deleteCartItem(item));
+    dispatch(cartActions.calculateTotalPriceCart());
+  };
+  //Selectors
+
+  const cartItemsArr = useSelector((state) => state.cart.cartItems);
+  const totalpricesincart = useSelector((state) => state.cart.totalCartPrice);
+
+  console.log(cartItemsArr); //prints twitce becuae adding make 2 actions
+
+  return (
+    <Fragment>
+      <div className={classes.orderItems}>
+        {restaurantMenu.map((item) => (
+          <Card>
+            <div key={item.id} className={classes.img}>
+              <img alt="item picture" src={item.image} />
+              <div>{item.name}</div>
+              <div>{item.price}</div>
+              <button onClick={() => addToCartHandler(item)}>add item</button>
+              <button onClick={() => removeToCartHandler(item)}>
+                remove item
+              </button>
+              <p>{totalpricesincart.toFixed(2)}</p>
+            </div>
+          </Card>
+        ))}
+      </div>
+    </Fragment>
+  );
+}
+export default OrderPage;
+
+/*code for adding + nad - buttons to add centain quantity of items to the cart
+/////
+//Handlers
   const addItemHandler = () => {
     if (quantityItems >= 10) {
       return;
@@ -23,63 +66,16 @@ function OrderPage(props) {
     }
     dispatch(cartActions.removeItem());
   };
+/////
 
-  const addToCartHandler = () => {
-    dispatch(cartActions.addCartItem(quantityItems));
-  };
 
-  //Selectors
-  const quantityItems = useSelector((state) => state.cart.totalMenuItems);
+<button onClick={removeItemHandler}>-</button>
+ <p>{quantityItems}</p>
+ <button onClick={addItemHandler}>+</button>
 
-  const cartItems = useSelector((state) => state.cart.totalCartItems);
 
-  return (
-    <Fragment>
-      <div className={classes.orderItems}>
-        {restaurantMenu.map((menuItem) => (
-          <Card>
-            <div className={classes.img}>
-              <img alt="item picture" src={menuItem.image} />
-              <div>{menuItem.name}</div>
-              <div>{menuItem.price}</div>
-              <button onClick={removeItemHandler}>-</button>
-              <p>{quantityItems}</p>
-              <button onClick={addItemHandler}>+</button>
-              <p>items in your cart = {cartItems}</p>
-              <button onClick={addToCartHandler}>add item</button>
-            </div>
-          </Card>
-        ))}
-      </div>
 
-      {/* {restaurantMenu.map((menuItem) => (
-        <div>
-          <MenuItems
-            image={menuItem.image}
-            key={menuItem.id}
-            id={menuItem.id}
-            description={menuItem.description}
-            price={menuItem.price}
-            name={menuItem.name}
-            calories={menuItem.calories}
-            category={menuItem.category}
-          />
-        </div>
-      ))} */}
+ const quantityItems = useSelector((state) => state.cart.totalMenuItems); //total of that item to push to cart
 
-      {/* <div className={classes.orderItems}>
-        <Card>
-          <h1>cheese burger</h1>
-
-          <p>$10.99</p>
-          <button onClick={removeItemHandler}>-</button>
-          <p>{quantityItems}</p>
-          <button onClick={addItemHandler}>+</button>
-          <p>items in your cart = {cartItems}</p>
-          <button onClick={addToCartHandler}>add item</button>
-        </Card>
-      </div> */}
-    </Fragment>
-  );
-}
-export default OrderPage;
+  const numberCartItems = useSelector((state) => state.cart.totalCartItems); //total items in cart
+*/
