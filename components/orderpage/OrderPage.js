@@ -31,18 +31,32 @@ function OrderPage(props) {
     <Fragment>
       <div className={classes.orderItems}>
         {restaurantMenu.map((item) => (
-          <Card>
-            <div key={item.id} className={classes.img}>
-              <img alt="item picture" src={item.image} />
-              <div>{item.name}</div>
-              <div>{item.price}</div>
-              <button onClick={() => addToCartHandler(item)}>add item</button>
-              <button onClick={() => removeToCartHandler(item)}>
-                remove item
-              </button>
-              <p>{totalpricesincart.toFixed(2)}</p>
-            </div>
-          </Card>
+          <div key={item.id} className={classes.cards}>
+            <Card>
+              <img
+                alt="item picture"
+                src={item.image}
+                className={classes.img}
+              />
+              <div className={classes.name}>{item.name}</div>
+              <div className={classes.price}>${item.price}</div>
+              <div className={classes.buttonsContainer}>
+                <button
+                  className={classes.orderButton}
+                  onClick={() => addToCartHandler(item)}
+                >
+                  add item
+                </button>
+                <button
+                  className={classes.orderButton}
+                  onClick={() => removeToCartHandler(item)}
+                >
+                  remove item
+                </button>
+              </div>
+              <p>total cart price={totalpricesincart.toFixed(2)}</p>
+            </Card>
+          </div>
         ))}
       </div>
     </Fragment>
@@ -50,7 +64,9 @@ function OrderPage(props) {
 }
 export default OrderPage;
 
-/*code for adding + nad - buttons to add centain quantity of items to the cart
+////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+/*code for adding + and - buttons to add centain quantity of items to the cart
 /////
 //Handlers
   const addItemHandler = () => {

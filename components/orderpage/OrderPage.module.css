@@ -1,14 +1,57 @@
 .orderItems {
   font-size: 2rem;
-  margin-left: 5rem;
+  margin: 5rem 5rem;
   display: flex;
 }
+.cards {
+  margin-left: 5rem;
+}
 
-.img img {
-  height: 10rem;
-  width: 10rem;
+.img {
+  height: 30rem;
+  width: 35rem;
 }
 
 .orderItems button {
   padding: 1rem;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 2rem;
+}
+
+.name {
+  font-size: 2rem;
+  text-align: center;
+  margin: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+.price {
+  margin-bottom: 2rem;
+  color: #333;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.orderButton {
+  display: flex;
+  flex-wrap: wrap;
+  color: #e7f5ff;
+  background-color: #4dabf7;
+  border: none;
+  border-radius: 10px;
+  font-size: 2rem;
+  padding: 10px 15px;
+  transform: translate(0, -10px);
+}
+
+.orderButton:hover,
+.orderButton:active {
+  background-color: #339af0;
+  cursor: pointer;
 }

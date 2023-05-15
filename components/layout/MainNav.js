@@ -41,9 +41,11 @@ function MainNav() {
           <li>
             <Link href="/">
               <button className={classes.cartContainer}>
-                <div className={classes.totalCartItems}>
-                  {cartItemZero && cartItems.length}
-                </div>
+                {cartItemZero && (
+                  <div className={classes.totalCartItems}>
+                    {cartItems.length}
+                  </div>
+                )}
                 <ShoppingCart
                   className={classes.cartLogo}
                   size={30}
