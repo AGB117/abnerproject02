@@ -9,18 +9,32 @@ function MainNav() {
 
   const cartItemZero = cartItems.length === 0 ? false : true;
 
-  const [mobileNav, setMobileNav] = useState(true);
-  //handlers
+  const [notMobileNav, setMobileNav] = useState(true);
+
+  // //handlers
   const mobileNavHandler = () => {
-    setMobileNav(!mobileNav);
-    console.log(mobileNav);
+    setMobileNav(!notMobileNav);
+    console.log(notMobileNav);
   };
 
-  useEffect(() => {}, [mobileNav]);
+  useEffect(() => {
+    window.innerWidth >= 1000 ? setMobileNav(true) : setMobileNav(false);
+    console.log(notMobileNav);
+    console.log(window.innerWidth);
+  }, []);
+
+  // const resizeHandler = () => {
+  //   setWindowWidth(resizeEffect);
+  // };
+  // const resizeEffect = useEffect(() => {
+  //   setWindowWidth(window.innerWidth);
+  // }, []);
+
+  // const [windowWidth, setWindowWidth] = useState(resizeHandler);
 
   return (
     <Fragment>
-      {mobileNav && (
+      {notMobileNav && (
         <nav className={classes.header}>
           <div className={classes.logo}>
             <Link href="/">
@@ -75,7 +89,7 @@ function MainNav() {
       <button
         onClick={mobileNavHandler}
         className={`${classes.mobileNav} ${
-          mobileNav && classes.navButtonBackgorund
+          notMobileNav && classes.navButtonBackgorund
         }`}
       >
         <List size={40} color="#212529" weight="regular" />
