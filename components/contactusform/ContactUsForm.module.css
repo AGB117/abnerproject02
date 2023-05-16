@@ -2,15 +2,40 @@
 Containers
 */
 .contactUsContainer {
-  width: 100vw;
   display: flex;
   justify-content: center;
   background-color: #f7f7f7;
-  /* margin-bottom: 0; */
 }
 
 .formContainer {
   margin: 3rem;
+}
+
+@media (max-width: 450px) {
+  .contactUsContainer {
+    width: 45rem;
+  }
+
+  .field input {
+    width: 30rem !important;
+  }
+
+  .comments textarea {
+    height: 10rem !important;
+    width: 30rem !important;
+  }
+  .contactUsContainer {
+    display: block;
+  }
+
+  .formContainer {
+    margin: 0rem;
+  }
+
+  .submitButtonCenter {
+    display: block !important;
+    margin-left: 10rem !important;
+  }
 }
 
 .formContainer h1 {
@@ -28,6 +53,7 @@ form format
   transition: all 0.3s;
   width: auto;
   height: auto;
+
   /* width: 90vw;for media query */
 }
 

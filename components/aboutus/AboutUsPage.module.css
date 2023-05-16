@@ -1,12 +1,11 @@
 .aboutUsContainer {
-  width: 100vw;
+  /* width: 100vw; */
   margin-top: 10rem;
   margin-bottom: 10rem;
 }
 
 .grid {
   display: grid;
-  height: 100%;
   height: 100%;
   column-gap: 4rem;
   background-color: transparent !important;
@@ -15,6 +14,31 @@
 .grid2cols {
   grid-template-columns: repeat(2, 1fr);
 }
+
+@media (max-width: 1000px) {
+  .grid2cols {
+    grid-template-columns: 1fr;
+    row-gap: 5rem;
+  }
+
+  .imageContainer {
+    justify-content: center !important;
+    align-content: center;
+  }
+
+  .storyContainer {
+    margin: 0rem 1rem !important;
+  }
+
+  .imageContainer img {
+    height: 20rem !important;
+    margin-left: 0 !important;
+  }
+}
+
+/*
+////image Container/////
+*/
 
 .imageContainer {
   display: flex;
@@ -29,6 +53,10 @@
   height: 30rem;
   margin-left: 5rem;
 }
+
+/*
+////story Container/////
+*/
 
 .storyContainer {
   font-size: 2rem;

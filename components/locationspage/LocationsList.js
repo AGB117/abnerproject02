@@ -13,11 +13,7 @@ function LocationsList(props) {
             <span>burger.place@burger.com</span>
           </div>
           <div className={classes.locationsMap}>
-            <iframe
-              src="https://www.google.com/maps/d/embed?mid=1nMGEeZRsfMHfZ0UUuc8sItSmijgBt9s&ehbc=2E312F"
-              width="640"
-              height="500"
-            ></iframe>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1nMGEeZRsfMHfZ0UUuc8sItSmijgBt9s&ehbc=2E312F"></iframe>
           </div>
         </div>
       </div>

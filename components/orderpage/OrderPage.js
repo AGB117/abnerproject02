@@ -31,7 +31,7 @@ function OrderPage(props) {
     <Fragment>
       <div className={classes.orderItems}>
         {restaurantMenu.map((item) => (
-          <div key={item.id} className={classes.cards}>
+          <div key={item.id}>
             <Card>
               <img
                 alt="item picture"
