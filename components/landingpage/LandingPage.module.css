@@ -54,17 +54,6 @@ Testimonials
   justify-items: center;
 }
 
-@media (max-width: 750px) {
-  .testimonialsGrid {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-  }
-
-  .testimonialsSection {
-    padding: 0rem 1rem !important;
-  }
-}
-
 .testimonialsSection {
   padding: 3rem;
 }
@@ -131,4 +120,21 @@ Testimonial gallery
 
 .galleryImg img:hover {
   transform: scale(1.2);
+}
+
+@media (max-width: 1000px) {
+  .heroSection {
+    margin-top: 10rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .testimonialsGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .testimonialsSection {
+    padding: 0rem 1rem !important;
+  }
 }

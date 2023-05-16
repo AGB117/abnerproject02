@@ -1,63 +1,86 @@
 import Link from "next/link";
 import classes from "./MainNav.module.css";
-import { ShoppingCart } from "@phosphor-icons/react";
+import { ShoppingCart, List } from "@phosphor-icons/react";
 import { useSelector } from "react-redux";
+import { Fragment, useEffect, useState } from "react";
 
 function MainNav() {
   const cartItems = useSelector((state) => state.cart.cartItems);
 
   const cartItemZero = cartItems.length === 0 ? false : true;
 
+  const [mobileNav, setMobileNav] = useState(true);
+  //handlers
+  const mobileNavHandler = () => {
+    setMobileNav(!mobileNav);
+    console.log(mobileNav);
+  };
+
+  useEffect(() => {}, [mobileNav]);
+
   return (
-    <header className={classes.header}>
-      <div className={classes.logo}>
-        <Link href="/">
-          <img alt="logo" src="/Color logo - no background.png"></img>
-        </Link>
-      </div>
-      <div>
-        <ul>
-          <li>
-            <Link href="/menu">Menu</Link>
-          </li>
-          <li>
-            <Link href="/locations">Locations</Link>
-          </li>
-
-          <li>
-            <Link href="/aboutus"> About Us</Link>
-          </li>
-
-          <li>
-            <Link href="/contactus">Contact Us</Link>
-          </li>
-
-          <li>
-            <Link href="/order">
-              <button className={classes.orderButton}>Order Now</button>
-            </Link>
-          </li>
-
-          <li>
+    <Fragment>
+      {mobileNav && (
+        <nav className={classes.header}>
+          <div className={classes.logo}>
             <Link href="/">
-              <button className={classes.cartContainer}>
-                {cartItemZero && (
-                  <div className={classes.totalCartItems}>
-                    {cartItems.length}
-                  </div>
-                )}
-                <ShoppingCart
-                  className={classes.cartLogo}
-                  size={30}
-                  color="#e7f5ff"
-                  weight="regular"
-                />
-              </button>
+              <img alt="logo" src="/Color logo - no background.png"></img>
             </Link>
-          </li>
-        </ul>
-      </div>
-    </header>
+          </div>
+          <div>
+            <ul>
+              <li>
+                <Link href="/menu">Menu</Link>
+              </li>
+              <li>
+                <Link href="/locations">Locations</Link>
+              </li>
+
+              <li>
+                <Link href="/aboutus"> About Us</Link>
+              </li>
+
+              <li>
+                <Link href="/contactus">Contact Us</Link>
+              </li>
+
+              <li>
+                <Link href="/order">
+                  <button className={classes.orderButton}>Order Now</button>
+                </Link>
+              </li>
+
+              <li>
+                <Link href="/">
+                  <button className={classes.cartContainer}>
+                    {cartItemZero && (
+                      <div className={classes.totalCartItems}>
+                        {cartItems.length}
+                      </div>
+                    )}
+                    <ShoppingCart
+                      className={classes.cartLogo}
+                      size={30}
+                      color="#e7f5ff"
+                      weight="regular"
+                    />
+                  </button>
+                </Link>
+              </li>
+              <li></li>
+            </ul>
+          </div>
+        </nav>
+      )}
+      <button
+        onClick={mobileNavHandler}
+        className={`${classes.mobileNav} ${
+          mobileNav && classes.navButtonBackgorund
+        }`}
+      >
+        <List size={40} color="#212529" weight="regular" />
+      </button>
+    </Fragment>
   );
 }
 
