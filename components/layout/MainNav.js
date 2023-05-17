@@ -10,7 +10,7 @@ function MainNav() {
 
   //component state
   const [mobileNav, setMobileNav] = useState();
-  const [openModal, setOpenModal] = useState(false);
+  const [openModal, setOpenModal] = useState();
 
   // //handlers
   const mobileNavHandler = () => {
@@ -22,6 +22,7 @@ function MainNav() {
     window.innerWidth <= 1000 ? setMobileNav(true) : null;
     window.innerWidth <= 1000 ? setOpenModal(false) : null;
     window.innerWidth >= 1000 ? setMobileNav(false) : null;
+    window.innerWidth >= 1000 ? setOpenModal(true) : null;
   }, []);
 
   const autoCloseModalHandler = () => {
@@ -122,24 +123,30 @@ export default MainNav;
   //////////////////////////
   //live current window size
 
+  //mobilenav
+  if (process.browser) {
+    console.log(window.innerWidth);
+  }
+
+
+  ////
+  const livewidth = useEffect(() => {
+    window.innerWidth;
+  },[]);
+  
+  useEffect(() => {
+    window.addEventListener("resize", widthHandler);
+  }, []);
+
   const [currentWidth, setCurrentWidth] = useState(livewidth);
 
   const widthHandler = () => {
     setCurrentWidth(window.innerWidth);
   };
-  useEffect(() => {
-    window.addEventListener("resize", widthHandler);
-  }, []);
 
 
-    //mobilenav
-    if (process.browser) {
-      console.log(window.innerWidth);
-    }
-    const livewidth = useEffect(() => {
-      window.innerWidth;
-    });
-    //
+
+
     useEffect(() => {
       currentWidth <= 1000 ? setMobileNav(false) : setMobileNav(true);
       currentWidth <= 1000 ? setOpenModal(false) : setOpenModal(true);
