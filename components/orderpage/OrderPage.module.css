@@ -6,6 +6,14 @@
   row-gap: 5rem;
 }
 
+.centerItems {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 1700px) {
   .orderItems {
     grid-template-columns: repeat(3, 1fr);
@@ -18,7 +26,7 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .orderItems {
     grid-template-columns: repeat(1, 1fr);
     margin: 2rem 1rem;
