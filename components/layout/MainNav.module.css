@@ -91,6 +91,13 @@
   margin-left: 0.5rem;
 }
 
+.logoMobile img {
+  height: 5rem;
+  width: 5rem;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+}
+
 /*//////////////
 ////mobile nav//////
 /////////////*/
@@ -99,7 +106,7 @@
   z-index: 10;
   border: none;
   display: none;
-  background-color: #f7f7f7;
+  background-color: transparent;
 }
 
 .mobileNav:hover,
@@ -108,7 +115,7 @@
 }
 
 .navButtonBackgorund {
-  background-color: #e7f5ff;
+  background-color: transparent;
 }
 /*//////////////
 ////media queries//////
@@ -127,7 +134,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 4rem;
+    font-size: 3rem;
     overflow: hidden;
     /* opacity: 0; */
   }
@@ -161,6 +168,10 @@
     position: absolute;
     top: 0;
     right: 0;
-    padding: 2rem;
+    padding: 1rem;
+  }
+
+  .mobileNavContainer {
+    width: 100vw;
   }
 }

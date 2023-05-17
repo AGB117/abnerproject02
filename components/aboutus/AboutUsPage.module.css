@@ -33,6 +33,11 @@
     height: 20rem !important;
     margin-left: 0 !important;
   }
+
+  .aboutUsContainer {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
 }
 
 /*

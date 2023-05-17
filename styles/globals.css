@@ -76,6 +76,12 @@ body {
   overflow-x: hidden;
 }
 
+@media (max-width: 1000px) {
+  html {
+    background-color: #fff;
+  }
+}
+
 /*
 reusable components
 */

@@ -124,7 +124,18 @@ Testimonial gallery
 
 @media (max-width: 1000px) {
   .heroSection {
-    margin-top: 10rem;
+    margin-top: 1rem;
+    padding: 0rem;
+    height: 90vh;
+  }
+  .heroContainer {
+    margin-bottom: 0rem;
+    padding: 0rem;
+  }
+
+  .testimonialsSection {
+    padding: 0rem;
+    margin-top: 2rem;
   }
 }
 

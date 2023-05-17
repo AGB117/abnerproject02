@@ -81,7 +81,7 @@ function MenuItemList(props) {
           className={`${classes.gridContainer} ${classes.grid} ${classes.grid3Cols}`}
         >
           {props.menuItems.map((menuItem) => (
-            <div key={Math.random()}>
+            <div className={classes.centerItems} key={Math.random()}>
               <MenuItems
                 key={menuItem.id}
                 id={menuItem.id}

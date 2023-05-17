@@ -11,33 +11,6 @@ Containers
   margin: 3rem;
 }
 
-@media (max-width: 450px) {
-  .contactUsContainer {
-    width: 45rem;
-  }
-
-  .field input {
-    width: 30rem !important;
-  }
-
-  .comments textarea {
-    height: 10rem !important;
-    width: 30rem !important;
-  }
-  .contactUsContainer {
-    display: block;
-  }
-
-  .formContainer {
-    margin: 0rem;
-  }
-
-  .submitButtonCenter {
-    display: block !important;
-    margin-left: 10rem !important;
-  }
-}
-
 .formContainer h1 {
   margin-bottom: 2rem;
 }
@@ -125,4 +98,37 @@ submit button
   cursor: not-allowed;
   background-color: lightgrey;
   color: #212529;
+}
+
+@media (max-width: 1000px) {
+  .contactUsContainer {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .contactUsContainer {
+    width: 45rem;
+  }
+
+  .field input {
+    width: 30rem !important;
+  }
+
+  .comments textarea {
+    height: 10rem !important;
+    width: 30rem !important;
+  }
+  .contactUsContainer {
+    display: block;
+  }
+
+  .formContainer {
+    margin: 0rem;
+  }
+
+  .submitButtonCenter {
+    display: block !important;
+    margin-left: 10rem !important;
+  }
 }

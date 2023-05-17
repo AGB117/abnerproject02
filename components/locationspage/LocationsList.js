@@ -8,7 +8,8 @@ function LocationsList(props) {
         <div className={`${classes.grid} ${classes.grid2cols}`}>
           <div className={classes.locationsColumn}>
             <h1 className={classes.locationsHeading}>Locations</h1>
-            <span> 555 Somewhere St Orlando, Florida 33888</span>
+            <span> 555 Somewhere St Orlando, </span>
+            <span>Florida 33888</span>
             <span>407-863-5555</span>
             <span>burger.place@burger.com</span>
           </div>
