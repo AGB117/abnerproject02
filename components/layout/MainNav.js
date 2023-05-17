@@ -5,18 +5,23 @@ import { useSelector } from "react-redux";
 import { Fragment, useEffect, useState } from "react";
 
 function MainNav() {
-  const cartItems = useSelector((state) => state.cart.cartItems);
+  //mobilenav
+  if (process.browser) {
+    console.log(window.innerWidth);
+  }
+  const livewidth = useEffect(() => {
+    window.innerWidth;
+  });
+  //
 
+  const cartItems = useSelector((state) => state.cart.cartItems);
   const cartItemZero = cartItems.length === 0 ? false : true;
 
-  const [notMobileNav, setMobileNav] = useState(false);
-  const [openModal, setOpenModal] = useState(false);
+  //component state
+  const [mobileNav, setMobileNav] = useState(livewidth >= 1000 ? true : false);
+  const [openModal, setOpenModal] = useState(livewidth <= 1000 ? false : true);
 
   // //handlers
-  // const mobileNavHandler = () => {
-  //   setMobileNav(!notMobileNav);
-  //   console.log(notMobileNav);
-  // };
 
   const autoCloseModalHandler = () => {
     setOpenModal(!openModal);
@@ -28,11 +33,8 @@ function MainNav() {
   ////////////////////////////
   //////////////////////////
   //live current window size
-  if (process.browser) {
-    console.log(window.innerWidth);
-  }
 
-  const [currentWidth, setCurrentWidth] = useState(window.innerWidth);
+  const [currentWidth, setCurrentWidth] = useState(livewidth);
 
   const widthHandler = () => {
     setCurrentWidth(window.innerWidth);
@@ -40,16 +42,17 @@ function MainNav() {
   useEffect(() => {
     window.addEventListener("resize", widthHandler);
   }, []);
+
   ///////////////////////////
   //////////////////////
 
   useEffect(() => {
-    currentWidth >= 1000 ? setMobileNav(true) : setMobileNav(false);
-    setOpenModal(false);
+    currentWidth <= 1000 ? setMobileNav(false) : setMobileNav(true);
+    currentWidth <= 1000 ? setOpenModal(false) : setOpenModal(true);
   }, [currentWidth]);
   return (
     <Fragment>
-      {(notMobileNav || openModal) && (
+      {(mobileNav || openModal) && (
         <nav className={classes.header}>
           <div className={classes.logo}>
             <Link onClick={autoCloseModalHandler} href="/">
@@ -58,10 +61,10 @@ function MainNav() {
           </div>
           <div>
             <ul>
-              {""}
+              {/* {""}
 
               <li>{currentWidth}</li>
-              {""}
+              {""} */}
               <li>
                 <Link onClick={autoCloseModalHandler} href="/menu">
                   Menu
@@ -113,15 +116,13 @@ function MainNav() {
         </nav>
       )}
 
-      {!notMobileNav && (
+      {(!mobileNav || openModal) && (
         <div className={classes.mobileNavContainer}>
           <Link className={classes.logoMobile} href="/">
             <img alt="logo" src="/ColorLogoNoBackground.png"></img>
           </Link>
           <button
-            className={` ${classes.mobileNav} ${
-              notMobileNav && classes.navButtonBackgorund
-            }`}
+            className={` ${classes.mobileNav} `}
             onClick={openCloseModalHandler}
           >
             <List size={35} color="#212529" weight="regular" />
@@ -136,7 +137,13 @@ export default MainNav;
 
 /*
 /////////////////////
+/////////////////////
+// const mobileNavHandler = () => {
+  //   setMobileNav(!notMobileNav);
+  //   console.log(notMobileNav);
+  // };
 //////////////////////
+//////////////////////////
 
 render this is we are NOT on mobile
 no menu button and no click handlers
