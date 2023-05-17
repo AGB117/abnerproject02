@@ -9,65 +9,90 @@ function MainNav() {
 
   const cartItemZero = cartItems.length === 0 ? false : true;
 
-  const [notMobileNav, setMobileNav] = useState(true);
+  const [notMobileNav, setMobileNav] = useState(false);
   const [openModal, setOpenModal] = useState(false);
 
   // //handlers
-  const mobileNavHandler = () => {
-    setMobileNav(!notMobileNav);
-    console.log(notMobileNav);
-  };
+  // const mobileNavHandler = () => {
+  //   setMobileNav(!notMobileNav);
+  //   console.log(notMobileNav);
+  // };
 
-  useEffect(() => {
-    window.innerWidth >= 1000 ? setMobileNav(true) : setMobileNav(false);
-  }, []);
-
-  const autoCloseModal = () => {
+  const autoCloseModalHandler = () => {
     setOpenModal(!openModal);
   };
 
+  const openCloseModalHandler = () => {
+    setOpenModal(!openModal);
+  };
+  ////////////////////////////
+  //////////////////////////
+  //live current window size
+  if (process.browser) {
+    console.log(window.innerWidth);
+  }
+
+  const [currentWidth, setCurrentWidth] = useState(window.innerWidth);
+
+  const widthHandler = () => {
+    setCurrentWidth(window.innerWidth);
+  };
+  useEffect(() => {
+    window.addEventListener("resize", widthHandler);
+  }, []);
+  ///////////////////////////
+  //////////////////////
+
+  useEffect(() => {
+    currentWidth >= 1000 ? setMobileNav(true) : setMobileNav(false);
+    setOpenModal(false);
+  }, [currentWidth]);
   return (
     <Fragment>
       {(notMobileNav || openModal) && (
         <nav className={classes.header}>
           <div className={classes.logo}>
-            <Link onClick={autoCloseModal} href="/">
+            <Link onClick={autoCloseModalHandler} href="/">
               <img alt="logo" src="/Color logo - no background.png"></img>
             </Link>
           </div>
           <div>
             <ul>
+              {""}
+
+              <li>{currentWidth}</li>
+              {""}
               <li>
-                <Link onClick={autoCloseModal} href="/menu">
+                <Link onClick={autoCloseModalHandler} href="/menu">
                   Menu
                 </Link>
               </li>
               <li>
-                <Link onClick={autoCloseModal} href="/locations">
+                <Link onClick={autoCloseModalHandler} href="/locations">
                   Locations
                 </Link>
               </li>
 
               <li>
-                <Link onClick={autoCloseModal} href="/aboutus">
+                <Link onClick={autoCloseModalHandler} href="/aboutus">
                   About Us
                 </Link>
               </li>
 
               <li>
-                <Link onClick={autoCloseModal} href="/contactus">
+                <Link onClick={autoCloseModalHandler} href="/contactus">
                   Contact Us
                 </Link>
               </li>
 
               <li>
-                <Link onClick={autoCloseModal} href="/order">
+                <Link onClick={autoCloseModalHandler} href="/order">
                   <button className={classes.orderButton}>Order Now</button>
                 </Link>
               </li>
 
               <li>
-                <Link onClick={autoCloseModal} href="/">
+                <Link onClick={autoCloseModalHandler} href="/">
                   <button className={classes.cartContainer}>
                     {cartItemZero && (
                       <div className={classes.totalCartItems}>
@@ -97,7 +122,7 @@ function MainNav() {
             className={` ${classes.mobileNav} ${
               notMobileNav && classes.navButtonBackgorund
             }`}
-            onClick={autoCloseModal}
+            onClick={openCloseModalHandler}
           >
             <List size={35} color="#212529" weight="regular" />
           </button>
