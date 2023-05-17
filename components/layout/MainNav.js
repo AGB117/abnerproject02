@@ -5,23 +5,24 @@ import { useSelector } from "react-redux";
 import { Fragment, useEffect, useState } from "react";
 
 function MainNav() {
-  //mobilenav
-  if (process.browser) {
-    console.log(window.innerWidth);
-  }
-  const livewidth = useEffect(() => {
-    window.innerWidth;
-  });
-  //
-
   const cartItems = useSelector((state) => state.cart.cartItems);
   const cartItemZero = cartItems.length === 0 ? false : true;
 
   //component state
-  const [mobileNav, setMobileNav] = useState(livewidth >= 1000 ? true : false);
-  const [openModal, setOpenModal] = useState(livewidth <= 1000 ? false : true);
+  const [mobileNav, setMobileNav] = useState();
+  const [openModal, setOpenModal] = useState(false);
 
   // //handlers
+  const mobileNavHandler = () => {
+    setMobileNav(!mobileNav);
+  };
+
+  useEffect(() => {
+    //this could work if i had a livewidth, rirght now the view changes according to the media queries and and not the live width
+    window.innerWidth <= 1000 ? setMobileNav(true) : null;
+    window.innerWidth <= 1000 ? setOpenModal(false) : null;
+    window.innerWidth >= 1000 ? setMobileNav(false) : null;
+  }, []);
 
   const autoCloseModalHandler = () => {
     setOpenModal(!openModal);
@@ -30,29 +31,10 @@ function MainNav() {
   const openCloseModalHandler = () => {
     setOpenModal(!openModal);
   };
-  ////////////////////////////
-  //////////////////////////
-  //live current window size
 
-  const [currentWidth, setCurrentWidth] = useState(livewidth);
-
-  const widthHandler = () => {
-    setCurrentWidth(window.innerWidth);
-  };
-  useEffect(() => {
-    window.addEventListener("resize", widthHandler);
-  }, []);
-
-  ///////////////////////////
-  //////////////////////
-
-  useEffect(() => {
-    currentWidth <= 1000 ? setMobileNav(false) : setMobileNav(true);
-    currentWidth <= 1000 ? setOpenModal(false) : setOpenModal(true);
-  }, [currentWidth]);
   return (
     <Fragment>
-      {(mobileNav || openModal) && (
+      {(!mobileNav || openModal) && (
         <nav className={classes.header}>
           <div className={classes.logo}>
             <Link onClick={autoCloseModalHandler} href="/">
@@ -116,7 +98,7 @@ function MainNav() {
         </nav>
       )}
 
-      {(!mobileNav || openModal) && (
+      {mobileNav && (
         <div className={classes.mobileNavContainer}>
           <Link className={classes.logoMobile} href="/">
             <img alt="logo" src="/ColorLogoNoBackground.png"></img>
@@ -135,6 +117,37 @@ function MainNav() {
 
 export default MainNav;
 
+/*
+////////////////////////////
+  //////////////////////////
+  //live current window size
+
+  const [currentWidth, setCurrentWidth] = useState(livewidth);
+
+  const widthHandler = () => {
+    setCurrentWidth(window.innerWidth);
+  };
+  useEffect(() => {
+    window.addEventListener("resize", widthHandler);
+  }, []);
+
+
+    //mobilenav
+    if (process.browser) {
+      console.log(window.innerWidth);
+    }
+    const livewidth = useEffect(() => {
+      window.innerWidth;
+    });
+    //
+    useEffect(() => {
+      currentWidth <= 1000 ? setMobileNav(false) : setMobileNav(true);
+      currentWidth <= 1000 ? setOpenModal(false) : setOpenModal(true);
+    }, [currentWidth]);
+  
+  ///////////////////////////
+  //////////////////////
+  */
 /*
 /////////////////////
 /////////////////////

@@ -121,7 +121,7 @@
 ////media queries//////
 /////////////*/
 
-@media (max-width: 1000px) {
+@media (max-width: 999px) {
   .header {
     z-index: 10;
     width: 100%;
@@ -172,6 +172,7 @@
   }
 
   .mobileNavContainer {
+    z-index: 100;
     width: 100vw;
   }
 }
