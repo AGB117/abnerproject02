@@ -17,14 +17,6 @@ function MainNav() {
     setMobileNav(!mobileNav);
   };
 
-  useEffect(() => {
-    //this could work if i had a livewidth, rirght now the view changes according to the media queries and and not the live width
-    window.innerWidth <= 1000 ? setMobileNav(true) : null;
-    window.innerWidth <= 1000 ? setOpenModal(false) : null;
-    window.innerWidth >= 1000 ? setMobileNav(false) : null;
-    window.innerWidth >= 1000 ? setOpenModal(true) : null;
-  }, []);
-
   const autoCloseModalHandler = () => {
     setOpenModal(!openModal);
   };
@@ -32,6 +24,31 @@ function MainNav() {
   const openCloseModalHandler = () => {
     setOpenModal(!openModal);
   };
+  ////////////////////////////////////////////
+  //////////////WIDTH CONTROLER///////////////
+  ////////////////////////////////////////////
+
+  //I'm proud of this solution!
+
+  const [windowWidth, setWindowWidth] = useState({ width: null }); //state
+
+  useEffect(() => {
+    //handler inside useEffect because the window object is only accesible on the client size for nextjs apps.
+    const widthHandler = () => {
+      setWindowWidth({ width: window.innerWidth });
+    };
+    //on rezide the function widthHandlrer is run thus updates in real time
+    window.addEventListener("resize", widthHandler);
+    widthHandler(); //run the widthHandler on mount for initial size
+  }, []);
+
+  useEffect(() => {
+    //I could refactor this but I don't want to
+    windowWidth.width <= 1000 ? setMobileNav(true) : null;
+    windowWidth.width <= 1000 ? setOpenModal(false) : null;
+    windowWidth.width >= 1000 ? setMobileNav(false) : null;
+    windowWidth.width >= 1000 ? setOpenModal(true) : null;
+  }, [windowWidth.width]);
 
   return (
     <Fragment>

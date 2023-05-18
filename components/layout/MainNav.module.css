@@ -121,7 +121,7 @@
 ////media queries//////
 /////////////*/
 
-@media (max-width: 999px) {
+@media (max-width: 1000px) {
   .header {
     z-index: 10;
     width: 100%;
@@ -134,7 +134,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 3rem;
+    font-size: 2rem;
     overflow: hidden;
     /* opacity: 0; */
   }
@@ -150,17 +150,17 @@
     margin: 2rem 0rem;
   }
   .orderButton {
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
 
   .cartContainer {
-    padding: 5rem;
+    padding: 4rem;
   }
 
   .cartLogo {
     height: 6rem;
     width: 6rem;
-    transform: translate(-3rem, -2.5rem);
+    transform: translate(-2.9rem, -2.5rem);
   }
 
   .mobileNav {
