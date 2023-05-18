@@ -15,7 +15,7 @@ function CartModal(props) {
         <button onClick={props.cartModalChild}>close modal</button>
         <p>items in cart: {totalItemsInCart}</p>
         {cart.cartItems.map((item) => (
-          <div key={item.id}>
+          <div key={Math.random()}>
             <div>{item.name}</div>
           </div>
         ))}
