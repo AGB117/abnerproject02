@@ -3,8 +3,9 @@ import classes from "./MainNav.module.css";
 import { ShoppingCart, List } from "@phosphor-icons/react";
 import { useSelector } from "react-redux";
 import { Fragment, useEffect, useState } from "react";
+import CartModal from "../ui/CartModal";
 
-function MainNav() {
+function MainNav(props) {
   const cartItems = useSelector((state) => state.cart.cartItems);
   const cartItemZero = cartItems.length === 0 ? false : true;
 
@@ -50,6 +51,15 @@ function MainNav() {
     windowWidth.width >= 1000 ? setOpenModal(true) : null;
   }, [windowWidth.width]);
 
+  ////////////////CART MODAL///////////////
+  const [cartModal, setCartModal] = useState(false);
+
+  const cartModalHandler = () => {
+    setCartModal(!cartModal);
+  };
+  console.log(cartModal);
+  ////////////////////////////////////////
+
   return (
     <Fragment>
       {(!mobileNav || openModal) && (
@@ -61,10 +71,6 @@ function MainNav() {
           </div>
           <div>
             <ul>
-              {/* {""}
-
-              <li>{currentWidth}</li>
-              {""} */}
               <li>
                 <Link onClick={autoCloseModalHandler} href="/menu">
                   Menu
@@ -121,6 +127,17 @@ function MainNav() {
           <Link className={classes.logoMobile} href="/">
             <img alt="logo" src="/ColorLogoNoBackground.png"></img>
           </Link>
+
+          {/* /////////////////modal test/////////////////// */}
+          <div>
+            <button className={classes.orderButton} onClick={cartModalHandler}>
+              cartModal
+            </button>
+          </div>
+          {cartModal && <CartModal cartModalChild={cartModalHandler} />}
+
+          {/* /////////////////modal test/////////////////// */}
+
           <button
             className={` ${classes.mobileNav} `}
             onClick={openCloseModalHandler}
