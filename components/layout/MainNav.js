@@ -121,21 +121,26 @@ function MainNav(props) {
               </li>
 
               <li>
-                <Link onClick={cartModalHandler} href="/">
-                  <button className={classes.cartContainer}>
-                    {cartItemZero && (
-                      <div className={classes.totalCartItems}>
-                        {cartItems.length}
-                      </div>
-                    )}
-                    <ShoppingCart
-                      className={classes.cartLogo}
-                      size={30}
-                      color="#e7f5ff"
-                      weight="regular"
-                    />
-                  </button>
-                </Link>
+                {/*create one of these buttons for desktop*/}
+                {mobileNav && (
+                  <div>
+                    <Link onClick={cartModalHandler} href="/order">
+                      <button className={classes.cartContainer}>
+                        {cartItemZero && (
+                          <div className={classes.totalCartItems}>
+                            {cartItems.length}
+                          </div>
+                        )}
+                        <ShoppingCart
+                          className={classes.cartLogo}
+                          size={30}
+                          color="#e7f5ff"
+                          weight="regular"
+                        />
+                      </button>
+                    </Link>
+                  </div>
+                )}
               </li>
             </ul>
           </div>
@@ -148,21 +153,18 @@ function MainNav(props) {
             <img alt="logo" src="/ColorLogoNoBackground.png"></img>
           </Link>
 
-          {/* /////////////////modal test/////////////////// */}
-
+          {/* /////////////////modal test for MOBILE/////////////////// */}
           {/* <button className={classes.orderButton} onClick={cartModalHandler}>
             cartModal
           </button> */}
+          {cartModal && <CartModal cartModalChild={cartModalHandler} />}
+          {/* /////////////////modal test for MOBILE/////////////////// */}
 
-          {cartModal && (
-            <CartModal
-              cartModalScroll={cartModalScroll}
-              cartModalChild={cartModalHandler}
-            />
-          )}
-
-          {/* /////////////////modal test/////////////////// */}
-
+          {/* /////////////////modal test for Desktop/////////////////// */}
+          {/* render the same exact button in the nav bar but change the properties
+          depending on if we are on mobile or on deskt,, basically open the the
+          cart modal */}
+          {/* /////////////////modal test for Desktop/////////////////// */}
           <button
             alt="navigation button"
             className={` ${classes.mobileNav} `}
