@@ -3,13 +3,13 @@ import classes from "./CartModal.module.css";
 import { Fragment, useState } from "react";
 // import "./antiscroll.css";
 
-function CartModal({ cartModalScroll, cartModalChild }) {
+function CartModal({ cartModalChild }) {
   const cart = useSelector((state) => state.cart);
   const totalItemsInCart = cart.cartItems.length;
 
   //cartModalChild closes and opens the carmodalcontrolled in the mainNav component
   //cartModalScroll has a state that detects is the carmodal is opened or closed
-  console.log(cartModalScroll);
+
   return (
     <Fragment>
       <div className={classes.modal}>

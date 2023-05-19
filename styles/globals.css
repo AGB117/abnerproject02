@@ -73,7 +73,7 @@ body {
   font-weight: 400;
   color: #555;
   /* only works if theres nothing aboslutely position in relation to body */
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 @media (max-width: 1000px) {

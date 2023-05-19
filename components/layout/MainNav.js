@@ -58,7 +58,6 @@ function MainNav(props) {
     setCartModal(!cartModal);
     setCartModalScroll(!cartModalScroll);
   };
-  console.log(cartModal);
 
   ////////////////////////////////////////
   /////////////////cart scroll///////////
@@ -67,7 +66,18 @@ function MainNav(props) {
   const cartModalScrollHandler = () => {
     setCartModalScroll(!cartModalScroll);
   };
-  console.log(`cartmodal ${cartModalScroll}`);
+  console.log(`openNavModal is open? ${openNavModal}`);
+  console.log(`cartModal is open? ${cartModal}`);
+
+  useEffect(() => {
+    if (cartModal === true || openNavModal === true) {
+      document.body.style.overflow = "hidden";
+    }
+    if (cartModal === false && openNavModal === false) {
+      document.body.style.overflow = "";
+    }
+  }, [cartModal, openNavModal]);
+
   ////////////////////////////////////////
   /////////////////cart scroll///////////
   return (
@@ -111,7 +121,7 @@ function MainNav(props) {
               </li>
 
               <li>
-                <Link onClick={autoCloseModalHandler} href="/">
+                <Link onClick={cartModalHandler} href="/">
                   <button className={classes.cartContainer}>
                     {cartItemZero && (
                       <div className={classes.totalCartItems}>
@@ -134,15 +144,15 @@ function MainNav(props) {
 
       {mobileNav && (
         <div className={classes.mobileNavContainer}>
-          <Link className={classes.logoMobile} href="/">
+          <Link className={classes.logoMobile} href="/order">
             <img alt="logo" src="/ColorLogoNoBackground.png"></img>
           </Link>
 
           {/* /////////////////modal test/////////////////// */}
 
-          <button className={classes.orderButton} onClick={cartModalHandler}>
+          {/* <button className={classes.orderButton} onClick={cartModalHandler}>
             cartModal
-          </button>
+          </button> */}
 
           {cartModal && (
             <CartModal
