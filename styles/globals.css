@@ -62,9 +62,9 @@ SPACING SYSTEM (px)
 html {
   /* font-size: 10px; */
   font-size: 62.5%;
-  overflow-x: hidden;
   scroll-behavior: smooth;
   background-color: #f7f7f7;
+  /* overflow-x: hidden; */
 }
 
 body {
@@ -73,7 +73,7 @@ body {
   font-weight: 400;
   color: #555;
   /* only works if theres nothing aboslutely position in relation to body */
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 @media (max-width: 1000px) {

@@ -11,7 +11,7 @@ function MainNav(props) {
 
   //component state
   const [mobileNav, setMobileNav] = useState();
-  const [openModal, setOpenModal] = useState();
+  const [openNavModal, setOpenNavModal] = useState();
 
   // //handlers
   const mobileNavHandler = () => {
@@ -19,11 +19,11 @@ function MainNav(props) {
   };
 
   const autoCloseModalHandler = () => {
-    setOpenModal(!openModal);
+    setOpenNavModal(!openNavModal);
   };
 
   const openCloseModalHandler = () => {
-    setOpenModal(!openModal);
+    setOpenNavModal(!openNavModal);
   };
   ////////////////////////////////////////////
   //////////////WIDTH CONTROLER///////////////
@@ -46,9 +46,9 @@ function MainNav(props) {
   useEffect(() => {
     //I could refactor this but I don't want to
     windowWidth.width <= 1000 ? setMobileNav(true) : null;
-    windowWidth.width <= 1000 ? setOpenModal(false) : null;
+    windowWidth.width <= 1000 ? setOpenNavModal(false) : null;
     windowWidth.width >= 1000 ? setMobileNav(false) : null;
-    windowWidth.width >= 1000 ? setOpenModal(true) : null;
+    windowWidth.width >= 1000 ? setOpenNavModal(true) : null;
   }, [windowWidth.width]);
 
   ////////////////CART MODAL///////////////
@@ -56,13 +56,23 @@ function MainNav(props) {
 
   const cartModalHandler = () => {
     setCartModal(!cartModal);
+    setCartModalScroll(!cartModalScroll);
   };
   console.log(cartModal);
-  ////////////////////////////////////////
 
+  ////////////////////////////////////////
+  /////////////////cart scroll///////////
+  const [cartModalScroll, setCartModalScroll] = useState(false);
+  //need to use filter to determine how many of the same item are in the object
+  const cartModalScrollHandler = () => {
+    setCartModalScroll(!cartModalScroll);
+  };
+  console.log(`cartmodal ${cartModalScroll}`);
+  ////////////////////////////////////////
+  /////////////////cart scroll///////////
   return (
     <Fragment>
-      {(!mobileNav || openModal) && (
+      {(!mobileNav || openNavModal) && (
         <nav className={classes.header}>
           <div className={classes.logo}>
             <Link onClick={autoCloseModalHandler} href="/">
@@ -129,16 +139,22 @@ function MainNav(props) {
           </Link>
 
           {/* /////////////////modal test/////////////////// */}
-          <div>
-            <button className={classes.orderButton} onClick={cartModalHandler}>
-              cartModal
-            </button>
-          </div>
-          {cartModal && <CartModal cartModalChild={cartModalHandler} />}
+
+          <button className={classes.orderButton} onClick={cartModalHandler}>
+            cartModal
+          </button>
+
+          {cartModal && (
+            <CartModal
+              cartModalScroll={cartModalScroll}
+              cartModalChild={cartModalHandler}
+            />
+          )}
 
           {/* /////////////////modal test/////////////////// */}
 
           <button
+            alt="navigation button"
             className={` ${classes.mobileNav} `}
             onClick={openCloseModalHandler}
           >
@@ -183,7 +199,7 @@ export default MainNav;
 
     useEffect(() => {
       currentWidth <= 1000 ? setMobileNav(false) : setMobileNav(true);
-      currentWidth <= 1000 ? setOpenModal(false) : setOpenModal(true);
+      currentWidth <= 1000 ? setOpenNavModal(false) : setOpenNavModal(true);
     }, [currentWidth]);
   
   ///////////////////////////
@@ -264,7 +280,7 @@ no menu button and no click handlers
 
 render this if we are on mobile
 
- {(!notMobileNav || openModal) && (
+ {(!notMobileNav || openNavModal) && (
         <nav className={classes.header}>
           <div className={classes.logo}>
             <Link onClick={mobileNavHandler} href="/">
