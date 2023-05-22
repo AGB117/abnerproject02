@@ -1,4 +1,4 @@
-This is my portfolio website. It was created using nextJS and hosted on vercel. I left the default readme below this for information.
+This is my mock restaurant website. It was created using nextJS and hosted on vercel. I left the default readme below this for information.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
