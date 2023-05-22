@@ -5,6 +5,7 @@ Containers
   display: flex;
   justify-content: center;
   background-color: #f7f7f7;
+  flex-wrap: wrap;
 }
 
 .formContainer {
@@ -20,6 +21,7 @@ form format
 */
 
 .formCard {
+  margin: 1rem 0rem;
   background-color: #fff;
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.085);
   border-radius: 11px;
@@ -41,6 +43,7 @@ form format
 .field label {
   font-size: 2rem;
 }
+
 .field input {
   height: 2.5rem;
   width: 40rem;
@@ -69,6 +72,7 @@ submit button
 .submitButtonCenter {
   display: flex;
   justify-content: center;
+  /* width: 100%; */
 }
 
 .submitButton {
@@ -108,7 +112,7 @@ submit button
 
 @media (max-width: 450px) {
   .contactUsContainer {
-    width: 45rem;
+    width: 100vw;
   }
 
   .field input {
@@ -120,15 +124,10 @@ submit button
     width: 30rem !important;
   }
   .contactUsContainer {
-    display: block;
+    display: flex;
   }
 
   .formContainer {
     margin: 0rem;
-  }
-
-  .submitButtonCenter {
-    display: block !important;
-    margin-left: 10rem !important;
   }
 }

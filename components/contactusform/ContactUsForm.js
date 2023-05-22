@@ -185,12 +185,14 @@ function ContactUsForm(props) {
                 </div>
               </div>
               <div className={classes.submitButtonCenter}>
-                <button
-                  className={classes.submitButton}
-                  disabled={!formIsValid}
-                >
-                  Submit
-                </button>
+                <div>
+                  <button
+                    className={classes.submitButton}
+                    disabled={!formIsValid}
+                  >
+                    Submit
+                  </button>
+                </div>
               </div>
             </form>
           </div>
