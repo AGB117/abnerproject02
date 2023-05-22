@@ -1,14 +1,21 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import classes from "./CartModal.module.css";
 import { Fragment, useState } from "react";
 import { X } from "@phosphor-icons/react";
+import { cartActions } from "../../store/cart-slice";
 
 function CartModal({ cartModalChild }) {
   const cart = useSelector((state) => state.cart);
   const totalItemsInCart = cart.cartItems.length;
 
-  //cartModalChild closes and opens the carmodalcontrolled in the mainNav component
-  //cartModalScroll has a state that detects is the carmodal is opened or closed
+  const dispatch = useDispatch();
+  const totalpricesincart = useSelector((state) => state.cart.totalCartPrice);
+
+  const removeToCartHandler = (item) => {
+    dispatch(cartActions.removeItemCart());
+    dispatch(cartActions.deleteCartItem(item));
+    dispatch(cartActions.calculateTotalPriceCart());
+  };
 
   return (
     <Fragment>
@@ -21,19 +28,33 @@ function CartModal({ cartModalChild }) {
           </div>
 
           <div className={classes.itemsListContainer}>
-            {cart.cartItems.map((item) => (
-              <div key={Math.random()}>
-                <div>
-                  {item.name} {`x ${totalItemsInCart} `}
+            <div>
+              {cart.cartItems.map((item) => (
+                <div key={Math.random()}>
+                  <div className={classes.itemLine}>
+                    {item.name}
+                    {/* <span>{`x ${totalItemsInCart}`}</span> */}
+                    <span className={classes.flexEnd}>
+                      <button
+                        className={classes.deleteButton}
+                        onClick={() => removeToCartHandler(item)}
+                      >
+                        delete
+                      </button>
+                    </span>
+                  </div>
                 </div>
+              ))}
+              <div className={classes.totalItems}>
+                <div>Total items in cart: {totalItemsInCart}</div>
+                <div>Total Order $ {totalpricesincart.toFixed(2)}</div>
               </div>
-            ))}
-            <p>items in cart: {totalItemsInCart}</p>
-            {/* {experimental} */}
-            {cart.cartItems.filter((item) => {
-              item.id === "m1";
-            })}
-            {/* {experimental} */}
+              {/* {experimental} */}
+              {cart.cartItems.filter((item) => {
+                item.id === "m1";
+              })}
+              {/* {experimental} */}
+            </div>
           </div>
           <div className={classes.submitButtonContainer}>
             <button className={classes.orderButton}>Place Order</button>

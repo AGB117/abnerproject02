@@ -50,8 +50,9 @@
 
 .buttonsContainer {
   display: flex;
-  justify-content: space-between;
-  margin: 2rem 2rem;
+  justify-content: center;
+  align-content: center;
+  margin: 4rem 2rem;
 }
 
 .name {
@@ -72,7 +73,6 @@
 
 .orderButton {
   display: flex;
-  flex-wrap: wrap;
   color: #e7f5ff;
   background-color: #4dabf7;
   border: none;

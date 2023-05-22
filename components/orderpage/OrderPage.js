@@ -20,6 +20,7 @@ function OrderPage(props) {
     dispatch(cartActions.deleteCartItem(item));
     dispatch(cartActions.calculateTotalPriceCart());
   };
+
   //Selectors
 
   const cartItemsArr = useSelector((state) => state.cart.cartItems);
@@ -41,20 +42,22 @@ function OrderPage(props) {
               <div className={classes.name}>{item.name}</div>
               <div className={classes.price}>${item.price}</div>
               <div className={classes.buttonsContainer}>
-                <button
-                  className={classes.orderButton}
-                  onClick={() => addToCartHandler(item)}
-                >
-                  add item
-                </button>
-                <button
+                <div>
+                  <button
+                    className={classes.orderButton}
+                    onClick={() => addToCartHandler(item)}
+                  >
+                    Add item
+                  </button>
+                </div>
+                {/* <button
                   className={classes.orderButton}
                   onClick={() => removeToCartHandler(item)}
                 >
                   remove item
-                </button>
+                </button> */}
               </div>
-              <p>total cart price={totalpricesincart.toFixed(2)}</p>
+              {/* <p>total cart price={totalpricesincart.toFixed(2)}</p> */}
             </Card>
           </div>
         ))}

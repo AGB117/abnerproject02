@@ -21,7 +21,7 @@
 
 .modalContainer {
   display: flex;
-  overflow: scroll;
+  overflow-y: scroll;
   flex-direction: column;
   width: inherit;
   height: inherit;
@@ -46,6 +46,7 @@
   font-size: 2rem;
   height: 5rem;
   width: 5rem;
+  padding-top: 0.5rem;
   justify-content: flex-end;
 }
 
@@ -62,11 +63,23 @@
   width: 17rem;
   padding: 1rem;
 }
+.deleteButton {
+  color: #e7f5ff;
+  background-color: #4dabf7;
+  border: none;
+  border-radius: 1rem;
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  padding: 1rem 1.5rem;
+}
 
-.modalContainer:hover,
-.modalContainer:active,
+.closeButton:hover,
+.closeButton:active,
 .orderButton:hover,
-.orderButton:active {
+.orderButton:active,
+.deleteButton:hover,
+.deleteButton:active {
   background-color: #339af0;
   cursor: pointer;
 }
@@ -75,5 +88,30 @@
   font-size: 3.2rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.itemLine {
+  margin: 1rem 1.5rem;
+  border-bottom: 1px solid;
+  border-color: #919191;
+  padding: 2rem 0rem 2rem 0rem;
+  gap: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flexEnd {
+  margin-left: auto;
+}
+
+.totalItems {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  margin: 3rem 1.5rem;
+  row-gap: 2rem;
 }
