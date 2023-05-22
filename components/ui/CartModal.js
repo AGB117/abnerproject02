@@ -14,23 +14,30 @@ function CartModal({ cartModalChild }) {
     <Fragment>
       <div className={classes.modal}>
         <div className={classes.modalContainer}>
-          <div className={classes.modalCloseButton}>
+          <div className={classes.closeButtonContainer}>
             <button className={classes.closeButton} onClick={cartModalChild}>
-              <X size={40} />
+              <X size={40} color="#e7f5ff" weight="bold" />
             </button>
           </div>
-          <div className={classes.itemsList}>
-            <p>items in cart: {totalItemsInCart}</p>
+
+          <div className={classes.itemsListContainer}>
             {cart.cartItems.map((item) => (
               <div key={Math.random()}>
-                <div>{item.name}</div>
+                <div>
+                  {item.name} {`x ${totalItemsInCart} `}
+                </div>
               </div>
             ))}
+            <p>items in cart: {totalItemsInCart}</p>
+            {/* {experimental} */}
             {cart.cartItems.filter((item) => {
               item.id === "m1";
             })}
+            {/* {experimental} */}
           </div>
-          <button className={classes.orderButton}>Submit</button>
+          <div className={classes.submitButtonContainer}>
+            <button className={classes.orderButton}>Place Order</button>
+          </div>
         </div>
       </div>
       <div onClick={cartModalChild} className={classes.backdrop}></div>
