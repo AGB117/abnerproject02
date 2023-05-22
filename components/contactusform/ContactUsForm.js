@@ -158,7 +158,6 @@ function ContactUsForm(props) {
                     name="phone"
                     placeholder="(_ _ _) _ _ _- _ _ _ _"
                     pattern="[0-9]{10}"
-                    // maxLength={10}
                   />
                 </div>
               </div>
