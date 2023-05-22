@@ -12,30 +12,67 @@
   position: fixed;
   top: 30vh;
   left: 10%;
-  width: 80%;
-  height: 50%;
+
+  width: 85vw;
+  height: 60vh;
   z-index: 100;
   background-color: white;
-  font-size: 2rem;
-  overflow: scroll;
+  border-radius: 1rem;
 }
 
-.modalContent {
+.modalContainer {
+  display: flex;
+  overflow: scroll;
+  flex-direction: column;
+  width: inherit;
+  height: inherit;
   font-size: 3rem;
 }
 
-.cartButtons button {
+.closeButton {
+  margin: 1rem;
+  color: #e7f5ff;
+  background-color: #4dabf7;
+  border: none;
+  border-radius: 1rem;
+  font-size: 2rem;
+  height: 5rem;
+  width: 5rem;
+  position: absolute;
+}
+
+.orderButton {
+  /* display: flex;
+  justify-content: center;
+  flex-wrap: wrap; */
+  margin: 1rem;
+
   color: #e7f5ff;
   background-color: #4dabf7;
   border: none;
   border-radius: 1rem;
   font-size: 2rem;
   padding: 1rem 1.5rem;
-  transform: translate(0, -1rem);
+  height: 5rem;
+  width: 10rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
-.cartButtons:hover,
-.cartButtons:active {
+.modalContainer:hover,
+.modalContainer:active,
+.orderButton:hover,
+.orderButton:active {
   background-color: #339af0;
   cursor: pointer;
+}
+
+.modalCloseButton {
+  display: flex;
+  justify-content: end;
+}
+
+.itemsList {
+  margin-top: 5rem;
 }

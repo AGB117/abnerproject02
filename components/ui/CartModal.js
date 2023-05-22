@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import classes from "./CartModal.module.css";
 import { Fragment, useState } from "react";
-// import "./antiscroll.css";
+import { X } from "@phosphor-icons/react";
 
 function CartModal({ cartModalChild }) {
   const cart = useSelector((state) => state.cart);
@@ -13,20 +13,24 @@ function CartModal({ cartModalChild }) {
   return (
     <Fragment>
       <div className={classes.modal}>
-        <div className={classes.modalContent}>
-          <button className={classes.cartButtons}>order here!!</button>
-          <button className={classes.cartButtons} onClick={cartModalChild}>
-            close modal
-          </button>
-          <p>items in cart: {totalItemsInCart}</p>
-          {cart.cartItems.map((item) => (
-            <div key={Math.random()}>
-              <div>{item.name}</div>
-            </div>
-          ))}
-          {cart.cartItems.filter((item) => {
-            item.id === "m1";
-          })}
+        <div className={classes.modalContainer}>
+          <div className={classes.modalCloseButton}>
+            <button className={classes.closeButton} onClick={cartModalChild}>
+              <X size={40} />
+            </button>
+          </div>
+          <div className={classes.itemsList}>
+            <p>items in cart: {totalItemsInCart}</p>
+            {cart.cartItems.map((item) => (
+              <div key={Math.random()}>
+                <div>{item.name}</div>
+              </div>
+            ))}
+            {cart.cartItems.filter((item) => {
+              item.id === "m1";
+            })}
+          </div>
+          <button className={classes.orderButton}>Submit</button>
         </div>
       </div>
       <div onClick={cartModalChild} className={classes.backdrop}></div>

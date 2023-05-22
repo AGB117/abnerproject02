@@ -80,7 +80,12 @@ function MainNav(props) {
     if (!mobileNav === true) {
       document.body.style.overflow = "scroll";
     }
+
     if (!mobileNav === true && cartModal === true) {
+      document.body.style.overflow = "hidden";
+    }
+
+    if (cartModal === true && mobileNav === true) {
       document.body.style.overflow = "hidden";
     }
   }, [cartModal, navModal, windowWidth]);
