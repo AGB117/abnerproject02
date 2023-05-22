@@ -19,3 +19,23 @@
   font-size: 2rem;
   overflow: scroll;
 }
+
+.modalContent {
+  font-size: 3rem;
+}
+
+.cartButtons button {
+  color: #e7f5ff;
+  background-color: #4dabf7;
+  border: none;
+  border-radius: 1rem;
+  font-size: 2rem;
+  padding: 1rem 1.5rem;
+  transform: translate(0, -1rem);
+}
+
+.cartButtons:hover,
+.cartButtons:active {
+  background-color: #339af0;
+  cursor: pointer;
+}

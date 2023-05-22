@@ -7,6 +7,7 @@ export const restaurantMenu = [
     calories: 599,
     category: "burgers",
     image: "/burger1.webp",
+    quantity: 0,
   },
   {
     id: "m2",
@@ -16,6 +17,7 @@ export const restaurantMenu = [
     calories: 599,
     category: "burgers",
     image: "burger2.webp",
+    quantity: 0,
   },
 
   {
@@ -26,6 +28,7 @@ export const restaurantMenu = [
     calories: 599,
     category: "burgers",
     image: "burger3.webp",
+    quantity: 0,
   },
   {
     id: "m7",
@@ -35,6 +38,7 @@ export const restaurantMenu = [
     calories: 250,
     category: "burgers",
     image: "/burger4.webp",
+    quantity: 0,
   },
   {
     id: "m4",
@@ -44,6 +48,7 @@ export const restaurantMenu = [
     calories: 400,
     category: "fries",
     image: "fries1.webp",
+    quantity: 0,
   },
   {
     id: "m5",
@@ -53,6 +58,7 @@ export const restaurantMenu = [
     calories: 300,
     category: "fries",
     image: "fries2.webp",
+    quantity: 0,
   },
   {
     id: "m6",
@@ -62,5 +68,6 @@ export const restaurantMenu = [
     calories: 250,
     category: "drinks",
     image: "soda1.webp",
+    quantity: 0,
   },
 ];
