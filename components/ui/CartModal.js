@@ -39,7 +39,7 @@ function CartModal({ cartModalChild }) {
                         className={classes.deleteButton}
                         onClick={() => removeToCartHandler(item)}
                       >
-                        delete
+                        Delete item
                       </button>
                     </span>
                   </div>
