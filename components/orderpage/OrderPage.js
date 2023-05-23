@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/cart-slice";
 import Card from "../ui/Card";
 import classes from "./OrderPage.module.css";
@@ -8,20 +8,11 @@ import { restaurantMenu } from "@/store/menu";
 function OrderPage(props) {
   const dispatch = useDispatch();
 
-  //handlers
   const addToCartHandler = (item) => {
     dispatch(cartActions.addItemCart());
     dispatch(cartActions.pushCartItem(item));
     dispatch(cartActions.calculateTotalPriceCart());
   };
-
-  const removeToCartHandler = (item) => {
-    dispatch(cartActions.removeItemCart());
-    dispatch(cartActions.deleteCartItem(item));
-    dispatch(cartActions.calculateTotalPriceCart());
-  };
-
-  const cartItemsArr = useSelector((state) => state.cart.cartItems);
 
   return (
     <Fragment>
