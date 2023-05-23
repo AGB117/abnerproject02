@@ -1,0 +1,72 @@
+.aboutUsContainer {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.grid {
+  display: grid;
+  height: 100%;
+  column-gap: 4rem;
+  background-color: transparent !important;
+}
+
+.grid2cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 1000px) {
+  .grid2cols {
+    grid-template-columns: 1fr;
+    row-gap: 5rem;
+  }
+
+  .imageContainer {
+    justify-content: center !important;
+    align-content: center;
+  }
+
+  .storyContainer {
+    margin: 0rem 1rem !important;
+  }
+
+  .imageContainer img {
+    height: 20rem !important;
+    margin-left: 0 !important;
+  }
+
+  .aboutUsContainer {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.imageContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-content: center;
+}
+
+.imageContainer img {
+  object-fit: fill;
+  width: auto;
+  height: 30rem;
+  margin-left: 5rem;
+}
+
+.storyContainer {
+  font-size: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  margin-right: 5rem;
+}
+
+.storyContainer h1 {
+  font-size: 4rem;
+}
+
+.storyContainer p {
+  margin-top: 3rem;
+  line-height: 1.4;
+}

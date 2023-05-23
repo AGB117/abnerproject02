@@ -1,0 +1,91 @@
+.itemLine {
+  display: flex;
+  height: 5rem;
+}
+
+.image {
+  height: 30rem;
+  width: 35rem;
+}
+
+.name {
+  font-size: 2rem;
+  text-align: center;
+  margin: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+.description {
+  color: #333;
+  font-size: 1.6rem;
+  margin-left: 5px;
+  align-items: center;
+  display: flex;
+}
+
+.calories {
+  font-size: 1.6rem;
+  color: #333;
+  margin-left: 5px;
+  align-items: center;
+  display: flex;
+}
+
+.caloriesNumber {
+  color: #212529;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-left: 5px;
+  align-items: center;
+  display: flex;
+}
+
+.price {
+  margin-left: 5px;
+  font-size: 2rem;
+  font-weight: 600;
+  align-items: center;
+  display: flex;
+}
+.price p {
+  color: #212529;
+}
+
+.descriptionIcon {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.dollarIcon {
+  margin-top: 8px;
+  margin-left: 10px;
+}
+
+.caloriesIcon {
+  margin-top: 8px;
+  margin-left: 10px;
+}
+
+.orderButton {
+  color: #e7f5ff;
+  background-color: #4dabf7;
+  border: none;
+  border-radius: 10px;
+  font-size: 2rem;
+  padding: 10px 15px;
+  align-items: center;
+}
+
+.orderButtonPosition {
+  margin-left: 15rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.orderButton:hover,
+.orderButton:active {
+  background-color: #339af0;
+  cursor: pointer;
+}

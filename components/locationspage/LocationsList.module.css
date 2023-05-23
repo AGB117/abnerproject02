@@ -1,0 +1,93 @@
+.locationsContainer {
+  width: 100vw;
+}
+
+.grid {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+}
+
+.grid2cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.locationsColumn {
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 30rem;
+}
+
+.locationsHeading {
+  margin-bottom: 3rem;
+  font-size: 4rem;
+}
+
+.locationsColumn span {
+  font-size: 2rem;
+  line-height: 3;
+  letter-spacing: 0.1rem;
+}
+
+.locationsMap {
+  padding: 6rem;
+}
+
+.locationsMap iframe {
+  width: 64rem;
+  height: 50rem;
+}
+
+@media (max-width: 1500px) {
+  .grid2cols {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 1rem;
+  }
+
+  .locationsColumn {
+    margin: 5rem;
+    align-items: center;
+    justify-content: start;
+  }
+}
+@media (max-width: 1000px) {
+  .locationsHeading {
+    margin-top: 1rem;
+  }
+
+  .locationsColumn {
+    margin: 1rem 1rem !important;
+  }
+}
+
+@media (max-width: 755px) {
+  .locationsMap iframe {
+    width: 47rem;
+    height: 33rem;
+  }
+
+  .grid {
+    width: 100vw;
+  }
+
+  .locationsColumn {
+    margin: 1rem 1rem !important;
+  }
+}
+@media (max-width: 550px) {
+  .locationsMap iframe {
+    width: 35rem;
+    height: 25rem;
+  }
+  .locationsMap {
+    padding: 0rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .locationsColumn {
+    margin: 1rem 1rem !important;
+  }
+}

@@ -1,0 +1,119 @@
+.contactUsContainer {
+  display: flex;
+  justify-content: center;
+  background-color: #f7f7f7;
+  flex-wrap: wrap;
+}
+
+.formContainer {
+  margin: 3rem;
+}
+
+.formContainer h1 {
+  margin-bottom: 2rem;
+}
+
+.formCard {
+  margin: 1rem 0rem;
+  background-color: #fff;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.085);
+  border-radius: 11px;
+  transition: all 0.3s;
+  width: auto;
+  height: auto;
+}
+
+.formSpacing {
+  padding: 2rem;
+}
+
+.field {
+  margin-top: 2rem;
+}
+
+.field label {
+  font-size: 2rem;
+}
+
+.field input {
+  height: 2.5rem;
+  width: 40rem;
+  margin-top: 0.5rem;
+  font-size: 1.8rem;
+  padding: 1.4rem 0.5rem;
+  border: 1px solid black;
+}
+
+.field input:invalid {
+  border: red solid 1px;
+}
+
+.comments textarea {
+  font-size: 1.8rem;
+  height: 16rem;
+  width: 40rem;
+  padding: 0.1rem 0.5rem;
+  overflow: auto;
+}
+
+.submitButtonCenter {
+  display: flex;
+  justify-content: center;
+}
+
+.submitButton {
+  margin: 1rem;
+  color: #e7f5ff;
+  background-color: #4dabf7;
+  border: none;
+  border-radius: 10px;
+  font-size: 2rem;
+  padding: 10px 15px;
+}
+
+.submitButton:hover,
+.submitButton:active {
+  cursor: pointer;
+}
+
+.invalidInput {
+  font-size: 1.5rem;
+  color: red;
+  margin-left: 1rem;
+}
+
+.submitButton:disabled,
+.submitButton:disabled:hover,
+.submitButton:disabled:active {
+  cursor: not-allowed;
+  background-color: lightgrey;
+  color: #212529;
+}
+
+@media (max-width: 1000px) {
+  .contactUsContainer {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .contactUsContainer {
+    width: 100vw;
+  }
+
+  .field input {
+    width: 30rem !important;
+  }
+
+  .comments textarea {
+    height: 10rem !important;
+    width: 30rem !important;
+  }
+  .contactUsContainer {
+    display: flex;
+  }
+
+  .formContainer {
+    margin: 0rem;
+  }
+}

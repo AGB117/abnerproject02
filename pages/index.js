@@ -1,14 +1,17 @@
-import Link from "next/link";
+import { Fragment } from "react";
+import Head from "next/head";
+import LandingPage from "../components/landingpage/LandingPage";
 
 function HomePage() {
   return (
-    <div>
-      <h1 color="red" text-align="center">
-        Under Construction... thanks for waiting
-      </h1>
-
-      {/* <Link href="./news">See the news!</Link> */}
-    </div>
+    <Fragment>
+      <Head>
+        <title>Burger Place | Home</title>
+        <meta name="description" content="website for restaurant" />
+        <link rel="icon" type="image/x-icon" href="/favicon.png" />
+      </Head>
+      <LandingPage />
+    </Fragment>
   );
 }
 
