@@ -129,14 +129,14 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #e7f5ff;
+    background-color: #e7f5fff1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+
+    justify-content: start;
     font-size: 2rem;
     overflow: hidden;
-    /* opacity: 0; */
   }
   .header ul {
     align-items: center;
@@ -145,6 +145,10 @@
 
   .header li {
     margin: 2rem 0rem;
+  }
+
+  .logo img {
+    margin-top: 5rem;
   }
 
   .orderButton {
