@@ -1,8 +1,13 @@
 import MenuItems from "./MenuItems";
 import classes from "./MenuItemList.module.css";
 import { Fragment, useEffect, useState } from "react";
+import { cartActions } from "@/store/cart-slice";
+import { useDispatch } from "react-redux";
 
 function MenuItemList(props) {
+  //global state
+  // const dispatch = useDispatch();
+
   //react state fro separating menu items by category
   const [category, setCategory] = useState("burgers");
   const [isBurgerActive, setIsBurgerActive] = useState(true);
@@ -91,6 +96,7 @@ function MenuItemList(props) {
                 image={menuItem.image}
                 calories={menuItem.calories}
                 category={menuItem.category}
+                item={menuItem}
               />
             </div>
           ))}

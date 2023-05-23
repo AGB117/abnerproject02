@@ -53,11 +53,13 @@ card
 
 .price {
   margin-left: 5px;
-  color: #333;
   font-size: 2rem;
   font-weight: 600;
   align-items: center;
   display: flex;
+}
+.price p {
+  color: #212529;
 }
 
 /*
@@ -78,4 +80,33 @@ card
 .caloriesIcon {
   margin-top: 8px;
   margin-left: 10px;
+}
+
+/*
+//////////////////////////
+//////ORDER BUTTON///////
+//////////////////////////
+*/
+
+.orderButton {
+  color: #e7f5ff;
+  background-color: #4dabf7;
+  border: none;
+  border-radius: 10px;
+  font-size: 2rem;
+  padding: 10px 15px;
+  align-items: center;
+}
+
+.orderButtonPosition {
+  margin-left: 15rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.orderButton:hover,
+.orderButton:active {
+  background-color: #339af0;
+  cursor: pointer;
 }

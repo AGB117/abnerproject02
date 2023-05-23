@@ -108,14 +108,23 @@ function MainNav(props) {
           </div>
           <div>
             <ul>
-              {/* <li>
-                <Link onClick={autoCloseModalHandler} href="/menu">
-                  Menu
-                </Link>
-              </li> */}
+              {mobileNav && (
+                <li>
+                  <Link onClick={autoCloseModalHandler} href="/order">
+                    <button className={classes.orderButton}>Order Now</button>
+                  </Link>
+                </li>
+              )}
+
               <li>
                 <Link onClick={autoCloseModalHandler} href="/locations">
                   Locations
+                </Link>
+              </li>
+
+              <li>
+                <Link onClick={autoCloseModalHandler} href="/menu">
+                  Menu
                 </Link>
               </li>
 
@@ -131,11 +140,13 @@ function MainNav(props) {
                 </Link>
               </li>
 
-              <li>
-                <Link onClick={autoCloseModalHandler} href="/order">
-                  <button className={classes.orderButton}>Order Now</button>
-                </Link>
-              </li>
+              {!mobileNav && (
+                <li>
+                  <Link onClick={autoCloseModalHandler} href="/order">
+                    <button className={classes.orderButton}>Order Now</button>
+                  </Link>
+                </li>
+              )}
 
               {/* <li>
                 <button

@@ -5,8 +5,19 @@ import {
 } from "@phosphor-icons/react";
 import classes from "./MenuItems.module.css";
 import Card from "../ui/Card";
+import { cartActions } from "@/store/cart-slice";
+import { useDispatch, useSelector } from "react-redux";
 
 function MenuItemList(props) {
+  const dispatch = useDispatch();
+
+  const addToCartHandler = (item) => {
+    console.log(item);
+    dispatch(cartActions.addItemCart());
+    dispatch(cartActions.pushCartItem(item));
+    dispatch(cartActions.calculateTotalPriceCart());
+  };
+
   return (
     <div //this is a lis <div>
     >
@@ -35,14 +46,25 @@ function MenuItemList(props) {
         </div>
 
         <div className={classes.itemLine}>
-          <CurrencyCircleDollar
-            className={classes.dollarIcon}
-            size={30}
-            color=" #4dabf7"
-            weight="regular"
-          />
-
-          <p className={classes.price}>{props.price}</p>
+          <div>
+            <CurrencyCircleDollar
+              className={classes.dollarIcon}
+              size={30}
+              color=" #4dabf7"
+              weight="regular"
+            />
+          </div>
+          <div className={classes.price}>
+            <p>{props.price}</p>
+          </div>
+          <div className={classes.orderButtonPosition}>
+            <button
+              className={classes.orderButton}
+              onClick={() => addToCartHandler(props.item)}
+            >
+              Add item
+            </button>
+          </div>
         </div>
       </Card>
     </div> //this is a lisr <li>
