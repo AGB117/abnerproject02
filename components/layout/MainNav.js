@@ -108,11 +108,11 @@ function MainNav(props) {
           </div>
           <div>
             <ul>
-              <li>
+              {/* <li>
                 <Link onClick={autoCloseModalHandler} href="/menu">
                   Menu
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link onClick={autoCloseModalHandler} href="/locations">
                   Locations
@@ -157,10 +157,51 @@ function MainNav(props) {
                 {cartModal && <CartModal cartModalChild={cartModalHandler} />}
               </li> */}
 
-              <li>
-                {/*create one of these buttons for desktop*/}
-                {/* {mobileNav && (
+              {!mobileNav && (
+                <li>
+                  {/*create one of these buttons for desktop*/}
+                  {/* {mobileNav && (
                   <div> */}
+
+                  <button
+                    onClick={cartModalHandler}
+                    className={classes.cartContainer}
+                  >
+                    {cartItemZero && (
+                      <div className={classes.totalCartItems}>
+                        {cartItems.length}
+                      </div>
+                    )}
+                    <ShoppingCart
+                      className={classes.cartLogo}
+                      size={30}
+                      color="#e7f5ff"
+                      weight="regular"
+                    />
+                  </button>
+
+                  {cartModal && <CartModal cartModalChild={cartModalHandler} />}
+                  {/* </div>
+                )} */}
+                </li>
+              )}
+            </ul>
+          </div>
+        </nav>
+      )}
+
+      {mobileNav && (
+        <div className={classes.mobileNavContainer}>
+          <Link className={classes.logoMobile} href="/">
+            <img
+              alt="logo for mobile nav"
+              src="/ColorLogoNoBackground.png"
+            ></img>
+          </Link>
+          {/* //cartdiv */}
+          <div>
+            {mobileNav && (
+              <div>
                 <button
                   onClick={cartModalHandler}
                   className={classes.cartContainer}
@@ -177,43 +218,26 @@ function MainNav(props) {
                     weight="regular"
                   />
                 </button>
+
                 {cartModal && <CartModal cartModalChild={cartModalHandler} />}
                 {/* </div>
                 )} */}
-              </li>
-            </ul>
+              </div>
+            )}
           </div>
-        </nav>
-      )}
+          {/* //cartdiv */}
 
-      {mobileNav && (
-        <div className={classes.mobileNavContainer}>
-          <Link className={classes.logoMobile} href="/">
-            <img
-              alt="logo for mobile nav"
-              src="/ColorLogoNoBackground.png"
-            ></img>
-          </Link>
-
-          {/* /////////////////modal test for MOBILE/////////////////// */}
-          {/* <button className={classes.orderButton} onClick={cartModalHandler}>
-            cartModal
-          </button> */}
           {cartModal && <CartModal cartModalChild={cartModalHandler} />}
-          {/* /////////////////modal test for MOBILE/////////////////// */}
 
-          {/* /////////////////modal test for Desktop/////////////////// */}
-          {/* render the same exact button in the nav bar but change the properties
-          depending on if we are on mobile or on deskt,, basically open the the
-          cart modal */}
-          {/* /////////////////modal test for Desktop/////////////////// */}
-          <button
-            alt="navigation button"
-            className={` ${classes.mobileNav} `}
-            onClick={openCloseModalHandler}
-          >
-            <List size={35} color="#212529" weight="regular" />
-          </button>
+          <div>
+            <button
+              className={classes.mobileNav}
+              alt="navigation button"
+              onClick={openCloseModalHandler}
+            >
+              <List size={35} color="#212529" weight="regular" />
+            </button>
+          </div>
         </div>
       )}
     </Fragment>
