@@ -1,4 +1,4 @@
-This is my mock restaurant website. It was created using nextJS and hosted on vercel. I left the default readme below this for information. This project is deployed on [Vercel](abnerproject02.vercel.app)
+This is my mock restaurant website. It was created using nextJS and hosted on vercel. I left the default readme below this for information. This project is deployed on [Vercel](https://abnerproject02.vercel.app)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
