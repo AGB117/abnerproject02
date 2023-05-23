@@ -1,6 +1,3 @@
-/*
-Hero section
-*/
 .heroSection {
   width: 100vw;
   height: 95vh;
@@ -18,7 +15,6 @@ Hero section
   height: 90vh;
   display: flex;
   justify-content: center;
-  /* background-attachment: fixed; */
 }
 
 .heroContainer {
@@ -41,10 +37,6 @@ Hero section
   color: #fff;
   font-size: 3rem;
 }
-
-/*
-Testimonials
-*/
 
 .testimonialsGrid {
   background-color: #f7f7f7;
@@ -98,9 +90,6 @@ Testimonials
   color: #6f6f6f;
 }
 
-/*
-Testimonial gallery
-*/
 .gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

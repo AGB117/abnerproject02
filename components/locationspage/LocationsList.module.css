@@ -6,8 +6,6 @@
   display: grid;
   row-gap: 9.6rem;
   column-gap: 6.4rem;
-  /* width: 100%;
-  height: 100%; */
 }
 
 .grid2cols {
@@ -20,7 +18,6 @@
   flex-direction: column;
   justify-content: center;
   margin-left: 30rem;
-  /* margin-right: auto; */
 }
 
 .locationsHeading {

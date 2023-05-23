@@ -21,12 +21,7 @@ function OrderPage(props) {
     dispatch(cartActions.calculateTotalPriceCart());
   };
 
-  //Selectors
-
   const cartItemsArr = useSelector((state) => state.cart.cartItems);
-  const totalpricesincart = useSelector((state) => state.cart.totalCartPrice);
-
-  console.log(cartItemsArr); //prints twitce becuae adding make 2 actions
 
   return (
     <Fragment>
@@ -50,14 +45,7 @@ function OrderPage(props) {
                     Add item
                   </button>
                 </div>
-                {/* <button
-                  className={classes.orderButton}
-                  onClick={() => removeToCartHandler(item)}
-                >
-                  remove item
-                </button> */}
               </div>
-              {/* <p>total cart price={totalpricesincart.toFixed(2)}</p> */}
             </Card>
           </div>
         ))}
@@ -66,35 +54,3 @@ function OrderPage(props) {
   );
 }
 export default OrderPage;
-
-////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////
-/*code for adding + and - buttons to add centain quantity of items to the cart
-/////
-//Handlers
-  const addItemHandler = () => {
-    if (quantityItems >= 10) {
-      return;
-    }
-    dispatch(cartActions.addItem());
-  };
-
-  const removeItemHandler = () => {
-    if (quantityItems <= 0) {
-      return;
-    }
-    dispatch(cartActions.removeItem());
-  };
-/////
-
-
-<button onClick={removeItemHandler}>-</button>
- <p>{quantityItems}</p>
- <button onClick={addItemHandler}>+</button>
-
-
-
- const quantityItems = useSelector((state) => state.cart.totalMenuItems); //total of that item to push to cart
-
-  const numberCartItems = useSelector((state) => state.cart.totalCartItems); //total items in cart
-*/

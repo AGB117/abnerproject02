@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialCartState = {
-  totalCartItems: 0, //total items in cart
-  totalCartPrice: 0, //total price of item
-  totalMenuItems: 0, // total of that item to push to cart
+  totalCartItems: 0,
+  totalCartPrice: 0,
+  totalMenuItems: 0,
   cartItems: [],
 };
 
@@ -29,11 +29,11 @@ const cartSlice = createSlice({
     deleteCartItem(state, action) {
       const index = state.cartItems.findIndex(
         (item) => item.id === action.payload.id
-      ); //index  gices the position of the first item with intented id
+      );
 
       if (index !== -1) {
         state.cartItems.splice(index, 1);
-      } //if index is 0 or higher then splice starts at index and stops one step later hence it deletes one object from the array with intended id.
+      }
     },
     calculateTotalPriceCart(state) {
       state.totalCartPrice = state.cartItems.reduce(

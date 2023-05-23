@@ -1,18 +1,8 @@
-/*
-///////////////
-inline card items
-//////////////////
-*/
 .itemLine {
   display: flex;
   height: 5rem;
 }
 
-/*
-///////
-card
-/////////
-*/
 .image {
   height: 30rem;
   width: 35rem;
@@ -62,11 +52,6 @@ card
   color: #212529;
 }
 
-/*
-//////////////////////////
-      ICONS
-//////////////////////////
-*/
 .descriptionIcon {
   margin-top: 5px;
   margin-left: 10px;
@@ -81,12 +66,6 @@ card
   margin-top: 8px;
   margin-left: 10px;
 }
-
-/*
-//////////////////////////
-//////ORDER BUTTON///////
-//////////////////////////
-*/
 
 .orderButton {
   color: #e7f5ff;

@@ -6,21 +6,19 @@ import {
 import classes from "./MenuItems.module.css";
 import Card from "../ui/Card";
 import { cartActions } from "@/store/cart-slice";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 function MenuItemList(props) {
   const dispatch = useDispatch();
 
   const addToCartHandler = (item) => {
-    console.log(item);
     dispatch(cartActions.addItemCart());
     dispatch(cartActions.pushCartItem(item));
     dispatch(cartActions.calculateTotalPriceCart());
   };
 
   return (
-    <div //this is a lis <div>
-    >
+    <div>
       <Card>
         <img className={classes.image} src={props.image}></img>
         <p className={classes.name}>{props.name}</p>
@@ -67,7 +65,7 @@ function MenuItemList(props) {
           </div>
         </div>
       </Card>
-    </div> //this is a lisr <li>
+    </div>
   );
 }
 

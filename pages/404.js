@@ -1,8 +1,5 @@
-import React, { Fragment } from "react";
+import React from "react";
 import ErrorPage from "@/components/errorpage/ErrorPage";
-// onMouseOver="this.style.color='red'"
-// onMouseOut="this.style.color='green'"
-
 function errorPage() {
   return <ErrorPage />;
 }

@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import classes from "./CartModal.module.css";
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import { X } from "@phosphor-icons/react";
 import { cartActions } from "../../store/cart-slice";
 
@@ -33,7 +33,7 @@ function CartModal({ cartModalChild }) {
                 <div key={Math.random()}>
                   <div className={classes.itemLine}>
                     {item.name}
-                    {/* <span>{`x ${totalItemsInCart}`}</span> */}
+
                     <span className={classes.flexEnd}>
                       <button
                         className={classes.deleteButton}
@@ -49,11 +49,10 @@ function CartModal({ cartModalChild }) {
                 <div>Total items in cart: {totalItemsInCart}</div>
                 <div>Total Order $ {totalpricesincart.toFixed(2)}</div>
               </div>
-              {/* {experimental} */}
+
               {cart.cartItems.filter((item) => {
                 item.id === "m1";
               })}
-              {/* {experimental} */}
             </div>
           </div>
           <div className={classes.submitButtonContainer}>
@@ -66,10 +65,3 @@ function CartModal({ cartModalChild }) {
   );
 }
 export default CartModal;
-
-// const [cartModalScroll, setCartModalScroll] = useState(false);
-// //need to use filter to determine how many of the same item are in the object
-// const cartModalScrollHandler = () => {
-//   setCartModalScroll(!cartModalScroll);
-//   console.log(cartModalScroll);
-// };

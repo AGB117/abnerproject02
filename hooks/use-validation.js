@@ -24,7 +24,7 @@ const useValidation = (validateValue) => {
     isValid: valueIsValid,
     hasError,
     valueChangeHandler,
-    inputBlurHandler, //so hey can be called by the component that uses this hook
+    inputBlurHandler,
     reset,
   };
 };

@@ -1,9 +1,8 @@
-import { useState, Fragment } from "react";
+import { Fragment } from "react";
 import classes from "./ContactUsForm.module.css";
 import useValidation from "@/hooks/use-validation";
 
 function ContactUsForm(props) {
-  /*name state*/
   const {
     value: enteredName,
     isValid: enteredNameIsValid,
@@ -12,7 +11,7 @@ function ContactUsForm(props) {
     inputBlurHandler: nameBlurHandler,
     reset: resetNameInput,
   } = useValidation((value) => value.trim() !== "");
-  /*last name state*/
+
   const {
     value: enteredLastName,
     isValid: enteredLastNameIsValid,
@@ -21,7 +20,7 @@ function ContactUsForm(props) {
     inputBlurHandler: lastNameBlurHandler,
     reset: resetLastNameInput,
   } = useValidation((value) => value.trim() !== "");
-  /*email state*/
+
   const {
     value: enteredEmail,
     isValid: enteredEmailIsValid,
@@ -31,7 +30,6 @@ function ContactUsForm(props) {
     reset: resetEmailInput,
   } = useValidation((value) => value.trim() !== "" && value.includes("@"));
 
-  /*phone state*/
   const {
     value: enteredPhone,
     isValid: enteredPhoneIsValid,
@@ -40,7 +38,7 @@ function ContactUsForm(props) {
     inputBlurHandler: phoneBlurHandler,
     reset: resetPhoneInput,
   } = useValidation((value) => value.trim() !== "");
-  /*comments state*/
+
   const {
     value: enteredComments,
     isValid: enteredCommentsIsValid,
@@ -49,7 +47,7 @@ function ContactUsForm(props) {
     inputBlurHandler: commentsBlurHandler,
     reset: resetCommentsInput,
   } = useValidation((value) => value.trim() !== "");
-  //form validation
+
   let formIsValid = false;
   if (
     enteredNameIsValid &&
@@ -74,7 +72,6 @@ function ContactUsForm(props) {
       return;
     }
 
-    /*reset fields*/
     resetNameInput();
     resetLastNameInput();
     resetEmailInput();

@@ -6,7 +6,7 @@
   margin-bottom: 4rem;
 }
 .menuItems ul {
-  margin-top: 2.5rem; /*this gives the entire list a margin on top but doesn't affect when there is multiple rows of items*/
+  margin-top: 2.5rem;
   list-style: none;
   justify-items: center;
 }
@@ -17,8 +17,6 @@
 
 .gridContainer {
   margin: 3rem 6.8rem;
-  /*justify-content: center;
-  align-items: center; */
 }
 
 .grid {
@@ -53,8 +51,6 @@
   border-radius: 10px;
   font-size: 2rem;
   padding: 10px 15px;
-  /* transform: translate(0, -10px); */
-  /* margin-left: 30px; */
 }
 
 .btnCategoryActive:hover,
@@ -69,8 +65,6 @@
   border: none;
   font-size: 2rem;
   padding: 10px 15px;
-  /* transform: translate(0, -10px); */
-  /* margin: 0rem 2rem; */
 }
 
 .btnCategoryInactive:hover,

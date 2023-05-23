@@ -16,10 +16,6 @@
   grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
 }
 
-/*
-Footer styling
-*/
-
 .footerLogo {
   width: 200px;
   height: 60px;
@@ -51,9 +47,6 @@ Footer styling
   font-size: 1.2rem;
 }
 
-/*
-media queries
-*/
 @media (max-width: 1000px) {
   .gridTemplateFooter {
     grid-template-columns: repeat(2, 1fr);
