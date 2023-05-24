@@ -17,7 +17,7 @@ function LandingPage() {
         <div className={`${classes.testimonialsSection} ${classes.leftcolumn}`}>
           <span className={classes.testimonialsSubheading}>Testimonials</span>
           <h1 className={classes.testimonialsHeading}>
-            See what our costumers are saying!
+            See what our customers are saying!
           </h1>
           <div className={classes.testimonials}>
             <figure className={classes.testimonial}>
