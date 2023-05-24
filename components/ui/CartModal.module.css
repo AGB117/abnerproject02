@@ -102,11 +102,12 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
 }
 
-.flexEnd {
+/* .flexEnd {
   margin-left: auto;
-}
+} */
 
 .totalItems {
   display: flex;
@@ -116,12 +117,21 @@
   row-gap: 2rem;
 }
 
-@media (max-width: 495px) {
-  .flexEnd {
-    margin-left: auto;
-    margin-right: auto;
-  }
+@media (max-width: 600px) {
   .itemLine {
+    display: grid;
+    justify-content: center;
+    row-gap: 2rem;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .centerName {
+    display: flex;
+    justify-content: center;
+  }
+
+  .centerButton {
+    display: flex;
     justify-content: center;
   }
 }

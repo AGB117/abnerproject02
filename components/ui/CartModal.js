@@ -32,16 +32,16 @@ function CartModal({ cartModalChild }) {
               {cart.cartItems.map((item) => (
                 <div key={Math.random()}>
                   <div className={classes.itemLine}>
-                    {item.name}
-
-                    <span className={classes.flexEnd}>
+                    <div className={classes.centerName}>{item.name}</div>
+                   
+                    <div className={classes.centerButton}>
                       <button
                         className={classes.deleteButton}
                         onClick={() => removeToCartHandler(item)}
                       >
                         Delete item
                       </button>
-                    </span>
+                    </div>
                   </div>
                 </div>
               ))}
