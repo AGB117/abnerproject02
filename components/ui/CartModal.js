@@ -33,7 +33,7 @@ function CartModal({ cartModalChild }) {
                 <div key={Math.random()}>
                   <div className={classes.itemLine}>
                     <div className={classes.centerName}>{item.name}</div>
-                    {/* <span>{`x ${totalItemsInCart}`}</span> */}
+                   
                     <div className={classes.centerButton}>
                       <button
                         className={classes.deleteButton}
