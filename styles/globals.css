@@ -81,7 +81,7 @@ body {
     background-color: #fff;
   }
   body::-webkit-scrollbar {
-    width: 0.5em;
+    width: 0.1em;
   }
 
   body::-webkit-scrollbar-thumb {
