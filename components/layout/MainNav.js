@@ -66,32 +66,32 @@ function MainNav(props) {
   useEffect(() => {
     //this is only for the cart modal,
     if (cartModal === true) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflowY = "hidden";
     } else {
-      document.body.style.overflow = "scroll";
+      document.body.style.overflowY = "scroll";
     }
 
     if (navModal === true) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflowY = "hidden";
     } else {
-      document.body.style.overflow = "scroll";
+      document.body.style.overflowY = "scroll";
     }
 
     if (!mobileNav === true) {
-      document.body.style.overflow = "scroll";
+      document.body.style.overflowY = "scroll";
     }
 
     if (!mobileNav === true && cartModal === true) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflowY = "hidden";
     }
 
     if (cartModal === true && mobileNav === true) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflowY = "hidden";
     }
   }, [cartModal, navModal, windowWidth]);
 
   ////////////////////////////////////////
-  /////////////////cart scroll///////////
+  /////////////////cart overflow///////////
 
   ///states
   console.log(`navModal is open? ${navModal}`);

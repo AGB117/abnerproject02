@@ -80,6 +80,17 @@ body {
   html {
     background-color: #fff;
   }
+  body::-webkit-scrollbar {
+    width: 0.5em;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  body::-webkit-scrollbar-track-vertical {
+    background-color: rgba(0, 0, 0, 0);
+  }
 }
 
 /*
