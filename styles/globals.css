@@ -23,5 +23,15 @@ body {
   html {
     background-color: #fff;
   }
-  /* //minor change */
+  body::-webkit-scrollbar {
+    width: 0.1em;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  body::-webkit-scrollbar-track-vertical {
+    background-color: rgba(0, 0, 0, 0);
+  }
 }
