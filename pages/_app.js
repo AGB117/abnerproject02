@@ -2,6 +2,7 @@ import Layout from "../components/layout/Layout";
 import "../styles/globals.css";
 import store from "../store/index";
 import { Provider } from "react-redux";
+import { Analytics } from "@vercel/analytics/react";
 
 function App({ Component, pageProps }) {
   return (
@@ -9,6 +10,7 @@ function App({ Component, pageProps }) {
       <Layout>
         <Component {...pageProps} />
       </Layout>
+      <Analytics />
     </Provider>
   );
 }
