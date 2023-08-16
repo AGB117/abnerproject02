@@ -9,8 +9,8 @@ function App({ Component, pageProps }) {
     <Provider store={store}>
       <Layout>
         <Component {...pageProps} />
+        <Analytics />
       </Layout>
-      <Analytics />
     </Provider>
   );
 }
