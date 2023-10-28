@@ -91,7 +91,9 @@ function ContactUsForm(props) {
               <div className={classes.field}>
                 <label htmlFor="name">First Name:</label>
                 {nameInputHasError && (
-                  <span className={classes.invalidInput}>Invalid input!</span>
+                  <span className={classes.invalidInput}>
+                    First name is blank!
+                  </span>
                 )}
                 <div>
                   <input
@@ -107,7 +109,9 @@ function ContactUsForm(props) {
               <div className={classes.field}>
                 <label htmlFor="lastname">Last Name:</label>
                 {lastNameInputHasError && (
-                  <span className={classes.invalidInput}>Invalid input!</span>
+                  <span className={classes.invalidInput}>
+                    Last name is blank!
+                  </span>
                 )}
                 <div>
                   <input
@@ -164,9 +168,7 @@ function ContactUsForm(props) {
                   comments:
                 </label>
                 {commentsInputHasError && (
-                  <span className={classes.invalidInput}>
-                    Invalid phone number!
-                  </span>
+                  <span className={classes.invalidInput}>Add a comment!</span>
                 )}
                 <div className={classes.comments}>
                   <textarea
