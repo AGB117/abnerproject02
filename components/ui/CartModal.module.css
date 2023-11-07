@@ -64,16 +64,6 @@
   width: 17rem;
   padding: 1rem;
 }
-.deleteButton {
-  color: #e7f5ff;
-  background-color: #4dabf7;
-  border: none;
-  border-radius: 1rem;
-  font-size: 2.4rem;
-  font-weight: 500;
-  letter-spacing: 0.1rem;
-  padding: 1rem 1.5rem;
-}
 
 .closeButton:hover,
 .closeButton:active,
@@ -118,6 +108,30 @@
   row-gap: 2rem;
 }
 
+.centerButton {
+  width: 17rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.deleteButton {
+  color: #e7f5ff;
+  background-color: #4dabf7;
+  border: none;
+  border-radius: 1rem;
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  padding: 1rem 1.5rem;
+}
+
+.itemQuantity {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
 @media (max-width: 600px) {
   .itemLine {
     display: grid;
@@ -133,6 +147,7 @@
 
   .centerButton {
     display: flex;
-    justify-content: center;
+    width: 17rem;
+    justify-self: center;
   }
 }

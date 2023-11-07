@@ -12,9 +12,7 @@ function MenuItemList(props) {
   const dispatch = useDispatch();
 
   const addToCartHandler = (item) => {
-    dispatch(cartActions.addItemCart());
-    dispatch(cartActions.pushCartItem(item));
-    dispatch(cartActions.calculateTotalPriceCart());
+    dispatch(cartActions.addItemCart(item));
   };
 
   return (

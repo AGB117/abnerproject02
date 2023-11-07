@@ -5,16 +5,23 @@ import { X } from "@phosphor-icons/react";
 import { cartActions } from "../../store/cart-slice";
 
 function CartModal({ cartModalChild }) {
-  const cart = useSelector((state) => state.cart);
-  const totalItemsInCart = cart.cartItems.length;
+  const cart = useSelector((state) => state.cart.cartItems);
+  // const totalItemsInCart = cart.cartItems.length;
 
   const dispatch = useDispatch();
-  const totalpricesincart = useSelector((state) => state.cart.totalCartPrice);
+  const totalpricesincart = cart.reduce(
+    (val, item) => val + item.price * item.quantity,
+    0
+  );
+
+  const totalItemsInCart = cart.reduce((val, item) => val + item.quantity, 0);
 
   const removeToCartHandler = (item) => {
-    dispatch(cartActions.removeItemCart());
-    dispatch(cartActions.deleteCartItem(item));
-    dispatch(cartActions.calculateTotalPriceCart());
+    dispatch(cartActions.removeItemCart(item));
+  };
+
+  const addToCartHandler = (item) => {
+    dispatch(cartActions.addItemCart(item));
   };
 
   return (
@@ -29,17 +36,25 @@ function CartModal({ cartModalChild }) {
 
           <div className={classes.itemsListContainer}>
             <div>
-              {cart.cartItems.map((item) => (
+              {cart.map((item) => (
                 <div key={Math.random()}>
                   <div className={classes.itemLine}>
-                    <div className={classes.centerName}>{item.name}</div>
-                   
+                    <div className={classes.centerName}>{item.title}</div>
                     <div className={classes.centerButton}>
                       <button
                         className={classes.deleteButton}
                         onClick={() => removeToCartHandler(item)}
                       >
-                        Delete item
+                        -
+                      </button>
+                      <span className={classes.itemQuantity}>
+                        {item.quantity}
+                      </span>
+                      <button
+                        className={classes.deleteButton}
+                        onClick={() => addToCartHandler(item)}
+                      >
+                        +
                       </button>
                     </div>
                   </div>
@@ -50,7 +65,7 @@ function CartModal({ cartModalChild }) {
                 <div>Total Order $ {totalpricesincart.toFixed(2)}</div>
               </div>
 
-              {cart.cartItems.filter((item) => {
+              {cart.filter((item) => {
                 item.id === "m1";
               })}
             </div>

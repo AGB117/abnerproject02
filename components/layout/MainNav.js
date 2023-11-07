@@ -7,7 +7,9 @@ import CartModal from "../ui/CartModal";
 
 function MainNav(props) {
   const cartItems = useSelector((state) => state.cart.cartItems);
-  const cartItemZero = cartItems.length === 0 ? false : true;
+  const cartItemZero = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+
+  const totalCartItems = cartItemZero.length === 0 ? false : true;
 
   const [mobileNav, setMobileNav] = useState();
   const [navModal, setnavModal] = useState(false);
@@ -125,9 +127,9 @@ function MainNav(props) {
                     onClick={cartModalHandler}
                     className={classes.cartContainer}
                   >
-                    {cartItemZero && (
+                    {totalCartItems && (
                       <div className={classes.totalCartItems}>
-                        {cartItems.length}
+                        {cartItemZero}
                       </div>
                     )}
                     <ShoppingCart
@@ -162,10 +164,8 @@ function MainNav(props) {
                   onClick={cartModalHandler}
                   className={classes.cartContainer}
                 >
-                  {cartItemZero && (
-                    <div className={classes.totalCartItems}>
-                      {cartItems.length}
-                    </div>
+                  {totalCartItems && (
+                    <div className={classes.totalCartItems}>{cartItemZero}</div>
                   )}
                   <ShoppingCart
                     className={classes.cartLogo}
