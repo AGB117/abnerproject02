@@ -1,6 +1,6 @@
 import Layout from "../components/layout/Layout";
 import "../styles/globals.css";
-import store from "../store/index";
+import store from "../store";
 import { Provider } from "react-redux";
 import { Analytics } from "@vercel/analytics/react";
 

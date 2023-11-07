@@ -1,7 +1,7 @@
 export const restaurantMenu = [
   {
     id: "m1",
-    name: "Western Burger",
+    title: "Western Burger",
     description: "Has onion rings and BBQ sauce",
     price: 4.99,
     calories: 599,
@@ -11,7 +11,7 @@ export const restaurantMenu = [
   },
   {
     id: "m2",
-    name: "Avocado Burger",
+    title: "Avocado Burger",
     description: "Has avocado and bacon",
     price: 8.99,
     calories: 599,
@@ -22,7 +22,7 @@ export const restaurantMenu = [
 
   {
     id: "m3",
-    name: "Egg Burger",
+    title: "Egg Burger",
     description: "Fried egg and bacon",
     price: 6.99,
     calories: 599,
@@ -32,7 +32,7 @@ export const restaurantMenu = [
   },
   {
     id: "m7",
-    name: "Classic Burger",
+    title: "Classic Burger",
     description: "Our classic burger",
     price: 1.99,
     calories: 250,
@@ -42,7 +42,7 @@ export const restaurantMenu = [
   },
   {
     id: "m4",
-    name: "Fries",
+    title: "Fries",
     description: "Handcut fresh every day!",
     price: 3.99,
     calories: 400,
@@ -52,7 +52,7 @@ export const restaurantMenu = [
   },
   {
     id: "m5",
-    name: "Sweet Potato Fries",
+    title: "Sweet Potato Fries",
     description: "Handcut fresh every day. Served with cinnamon butter.",
     price: 3.99,
     calories: 300,
@@ -62,7 +62,7 @@ export const restaurantMenu = [
   },
   {
     id: "m6",
-    name: "Fountain Drink",
+    title: "Fountain Drink",
     description: "soda",
     price: 1.99,
     calories: 250,

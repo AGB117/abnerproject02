@@ -1,17 +1,18 @@
 import { Fragment } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../../store/cart-slice";
 import Card from "../ui/Card";
 import classes from "./OrderPage.module.css";
 import { restaurantMenu } from "@/store/menu";
 
 function OrderPage(props) {
+  //temporary test
+  const currentState = useSelector((state) => state.cart.cartItems);
   const dispatch = useDispatch();
 
   const addToCartHandler = (item) => {
-    dispatch(cartActions.addItemCart());
-    dispatch(cartActions.pushCartItem(item));
-    dispatch(cartActions.calculateTotalPriceCart());
+    dispatch(cartActions.addItemCart(item));
+    console.log(currentState);
   };
 
   return (
@@ -25,7 +26,7 @@ function OrderPage(props) {
                 src={item.image}
                 className={classes.img}
               />
-              <div className={classes.name}>{item.name}</div>
+              <div className={classes.name}>{item.title}</div>
               <div className={classes.price}>${item.price}</div>
               <div className={classes.buttonsContainer}>
                 <div>
