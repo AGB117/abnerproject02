@@ -6,8 +6,6 @@ import { cartActions } from "../../store/cart-slice";
 
 function CartModal({ cartModalChild }) {
   const cart = useSelector((state) => state.cart.cartItems);
-  // const totalItemsInCart = cart.cartItems.length;
-
   const dispatch = useDispatch();
   const totalpricesincart = cart.reduce(
     (val, item) => val + item.price * item.quantity,
