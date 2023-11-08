@@ -1,18 +1,14 @@
 import { Fragment } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/cart-slice";
 import Card from "../ui/Card";
 import classes from "./OrderPage.module.css";
 import { restaurantMenu } from "@/store/menu";
 
 function OrderPage(props) {
-  //temporary test
-  const currentState = useSelector((state) => state.cart.cartItems);
   const dispatch = useDispatch();
-
   const addToCartHandler = (item) => {
     dispatch(cartActions.addItemCart(item));
-    console.log(currentState);
   };
 
   return (
