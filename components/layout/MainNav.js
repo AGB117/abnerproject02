@@ -9,7 +9,7 @@ function MainNav(props) {
   const cartItems = useSelector((state) => state.cart.cartItems);
   const cartItemZero = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
-  const totalCartItems = cartItemZero.length === 0 ? false : true;
+  const totalCartItems = cartItemZero === 0 ? false : true;
 
   const [mobileNav, setMobileNav] = useState();
   const [navModal, setnavModal] = useState(false);
